@@ -5,6 +5,7 @@ interface IGame
     title: string,
     platform: string,
     releaseYear: number,
+    price: number,
     image?: File
 }
 

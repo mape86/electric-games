@@ -3,7 +3,9 @@ interface IConsole
 {
     id?: number,
     model: string,
-    producer: string,
+    brand: string,
+    price: number,
+    description: string,
     image?: File
 
 }

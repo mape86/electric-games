@@ -5,6 +5,7 @@ interface ICharacter
     name: string,
     gender: string,
     game: string,
+    description: string,
     image?: File
 }
 
