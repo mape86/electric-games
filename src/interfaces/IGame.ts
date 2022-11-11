@@ -6,7 +6,11 @@ interface IGame
     platform: string,
     releaseYear: number,
     price: number,
-    image: string
+    heroImage: string,
+    inGameImage1: string,
+    inGameImage2: string,
+    inGameImage3: string,
+    inGameImage4: string,
 }
 
 export default IGame;
