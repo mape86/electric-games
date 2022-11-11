@@ -1,5 +1,5 @@
 
-interface IConsole 
+interface IGameConsole 
 {
     id?: number,
     model: string,
@@ -10,4 +10,4 @@ interface IConsole
 
 }
 
-export default IConsole;
+export default IGameConsole;
