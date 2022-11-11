@@ -6,7 +6,7 @@ interface IGame
     platform: string,
     releaseYear: number,
     price: number,
-    image?: File
+    image: string
 }
 
 export default IGame;

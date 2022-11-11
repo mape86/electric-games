@@ -6,7 +6,7 @@ interface IConsole
     brand: string,
     price: number,
     description: string,
-    image?: File
+    image: string
 
 }
 

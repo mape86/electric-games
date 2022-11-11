@@ -6,7 +6,7 @@ interface ICharacter
     gender: string,
     game: string,
     description: string,
-    image?: File
+    image: string
 }
 
 export default ICharacter
