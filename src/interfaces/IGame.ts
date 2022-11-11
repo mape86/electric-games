@@ -3,6 +3,7 @@ interface IGame
 {
     id?: number,
     title: string,
+    description: string,
     platform: string,
     releaseYear: number,
     price: number,
