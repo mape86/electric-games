@@ -16,10 +16,18 @@
     padding: 2rem;
 }
 
-.footer-ul{
+.footer-nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.link-styling{
     text-decoration: none;
-    list-style: none;
+    color: white;
+}
+
+.link-styling:hover{
+    text-decoration: none;
+    color: white;
 }
