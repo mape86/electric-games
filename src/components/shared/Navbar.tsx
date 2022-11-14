@@ -7,8 +7,7 @@ const Navbar = () => {
       <div className="d-flex justify-content-around">
         <div>
           <Link className="btn btn-large btn-rounded btn-outline-light" to="/">
-            {" "}
-            Home{" "}
+            Home
           </Link>
         </div>
         <div>
@@ -16,8 +15,7 @@ const Navbar = () => {
             className="btn btn-large btn-rounded btn-outline-light"
             to="ConsolePage"
           >
-            {" "}
-            Consoles{" "}
+            Consoles
           </Link>
         </div>
         <div>

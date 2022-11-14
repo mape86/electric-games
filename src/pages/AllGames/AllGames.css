@@ -1,0 +1,11 @@
+.all-games-section {
+  background-image: url("./images/aplaguetalemain.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 600px;
+}
+
+.all-games {
+  background-color: #040608;
+  color: white;
+}
