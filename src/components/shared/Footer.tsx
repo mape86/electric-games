@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <section className="language-section">
-                <select className="form-select">
+                <select className="form-select form-select-sm">
                     <option value="english">English(US)</option>
                     <option value="norwegian">Norsk</option>
                 </select>
