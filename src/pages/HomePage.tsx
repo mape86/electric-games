@@ -9,7 +9,10 @@ const HomePage = () => {
         <section> 
             <Link to="PlagueTalePage">Plague Tale</Link>
         </section>
-        <section><Link to="RedDeadRedemtion">Red Dead Redemtion</Link>
+        <section>
+            <Link to="RedDeadRedemtion">Red Dead Redemtion</Link>  
+        </section>
+        <section>
             <Link to="Skyrim">Skyrim</Link>
         </section>
         <section>
