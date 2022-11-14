@@ -22,7 +22,8 @@
 }
 
 .rights-section h4{
-    font-size: 2rem;
+    font-size: 3rem;
+
 }
 
 .footer-nav{
@@ -46,5 +47,5 @@
 Float:left;
  height:50px;
  width:1px;
- background-color: lightgray; 
+ background-color: #707070;
 }
