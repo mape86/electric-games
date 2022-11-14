@@ -36,8 +36,8 @@ function App() {
       <Route path='TombRaiderPage' element={<TombRaiderPage/>}/>
       <Route path='UnchartedPage' element={<UnchartedPage/>}/>
     </Routes>
-    </BrowserRouter>
     <Footer></Footer>
+    </BrowserRouter>
     </>
   );
 }
