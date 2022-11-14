@@ -1,14 +1,17 @@
 import {Link} from 'react-router-dom'
+import "bootstrap/dist/css/bootstrap.min.css";
+import './Navbar.css'
 
 const Navbar = () => {
     return (
-        <nav className='navbar navbar-expand-lg'>
-          <div className='container'></div>
-            <div className='d-flex flex-row'>
-              <Link className='btn btn-large btn-rounded btn-outline-light' to='/'> Home </Link>
-              <Link to='ConsolePage'> Consoles </Link>
-              <Link to='CharacterPage'>Characters</Link>
+        <nav className='navbar navbar-expand-lg navbar-bg'>
+          
+            <div className='d-flex justify-content-around'>
+              <div><Link className='btn btn-large btn-rounded btn-outline-light' to='/'> Home </Link></div>
+              <div><Link className='btn btn-large btn-rounded btn-outline-light' to='ConsolePage'> Consoles </Link></div>
+              <div><Link className='btn btn-large btn-rounded btn-outline-light' to='CharacterPage'>Characters</Link></div>
             </div>
+          
         </nav>
       )
 } 
