@@ -15,10 +15,10 @@ const Footer = () => {
                 <p>Electric games inc. All rights reserved.</p>
             </section>
             <nav className="footer-nav">
-                    <Link to="" className="link-styling" >Privacy</Link>
-                    <Link to="" className="link-styling" >Legal</Link>
-                    <Link to="" className="link-styling" >Terms</Link>
-                    <Link to="" className="link-styling" >Cookie Policy</Link>
+                    <Link to="" className="link-styling link-border" >Privacy</Link>
+                    <Link to="" className="link-styling link-border" >Legal</Link>
+                    <Link to="" className="link-styling link-border" >Terms</Link>
+                    <Link to="" className="link-styling link-border" >Cookie Policy</Link>
                     <Link to="" className="link-styling" >Cookie Settings</Link>
             </nav>
         </footer>

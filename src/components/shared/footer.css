@@ -25,9 +25,14 @@
 .link-styling{
     text-decoration: none;
     color: white;
+    padding: 1rem;
 }
 
 .link-styling:hover{
     text-decoration: none;
     color: white;
+}
+
+.link-border{
+    border-right: 1px solid white;
 }
