@@ -6,6 +6,8 @@ interface IGame
     description: string,
     platform: string,
     releaseYear: number,
+    publisher: string,
+    genre: string,
     price: number,
     heroImage: string,
     inGameImage1: string,
