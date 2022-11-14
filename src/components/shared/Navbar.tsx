@@ -6,7 +6,7 @@ const Navbar = () => {
         <nav className='navbar navbar-expand-lg'>
           <div className='container'></div>
             <div className='d-flex flex-row'>
-              <Link className='btn btn-large btn-rounded' to='/'> Home </Link>
+              <Link className='btn btn-large btn-rounded btn-outline-light' to='/'> Home </Link>
               <Link to='ConsolePage'> Consoles </Link>
               <Link to='CharacterPage'>Characters</Link>
             </div>
