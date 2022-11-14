@@ -1,20 +1,18 @@
 
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import {HomePage, CharacterPage, ConsolePage, AssassinsCreed, PlagueTalePage, RedDeadRedemtion, Skyrim, TheLastOfUsPage, TheWitcherPage, TombRaiderPage, UnchartedPage} from './pages/index'
+import Navbar from './components/shared/Navbar';
 
 function App() {
   return (
     <>
     <BrowserRouter>
     <div>
-      <h1>Hello teammates!</h1>
+      <Navbar/>
     </div>
     <nav>
       <ul>
-        <li><Link to="/">Home</Link></li>
         <li><Link to="AssassinsCreed">Assasins Creed</Link></li>
-        <li><Link to="CharacterPage">Characters</Link></li>
-        <li><Link to="ConsolePage">Consoles</Link></li>
         <li><Link to="PlagueTalePage">Plague Tale</Link></li>
         <li><Link to="RedDeadRedemtion">Red Dead Redemtion</Link></li>
         <li><Link to="Skyrim">Skyrim</Link></li>
