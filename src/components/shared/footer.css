@@ -16,6 +16,19 @@
     padding: 2rem;
 }
 
+<<<<<<< HEAD
+=======
+.rights-section p{
+    font-size: 0.7rem;
+    color: #707070;
+}
+
+.rights-section h4{
+    font-size: 3rem;
+
+}
+
+>>>>>>> origin/shared-footer
 .footer-nav{
     display: flex;
     flex-direction: row;
@@ -33,6 +46,14 @@
     color: white;
 }
 
+<<<<<<< HEAD
 .link-border{
     border-right: 1px solid white;
+=======
+.vertical-line{
+Float:left;
+ height:50px;
+ width:1px;
+ background-color: #707070;
+>>>>>>> origin/shared-footer
 }

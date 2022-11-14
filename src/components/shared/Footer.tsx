@@ -12,13 +12,23 @@ const Footer = () => {
             </section>
             <section className="rights-section">
                 <h4>Electric Games</h4>
-                <p>Electric games inc. All rights reserved.</p>
+                <p>©2022 ELECTRIC GAMES, INC. ALL RIGHTS RESERVED.</p>
             </section>
             <nav className="footer-nav">
                     <Link to="" className="link-styling link-border" >Privacy</Link>
+<<<<<<< HEAD
                     <Link to="" className="link-styling link-border" >Legal</Link>
                     <Link to="" className="link-styling link-border" >Terms</Link>
                     <Link to="" className="link-styling link-border" >Cookie Policy</Link>
+=======
+                    <div className="vertical-line"></div>
+                    <Link to="" className="link-styling link-border" >Legal</Link>
+                    <div className="vertical-line"></div>
+                    <Link to="" className="link-styling link-border" >Terms</Link>
+                    <div className="vertical-line"></div>
+                    <Link to="" className="link-styling link-border" >Cookie Policy</Link>
+                    <div className="vertical-line"></div>
+>>>>>>> origin/shared-footer
                     <Link to="" className="link-styling" >Cookie Settings</Link>
             </nav>
         </footer>

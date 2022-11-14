@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import Footer from './components/shared/Footer';
+import SocialsBanner from "./components/shared/SocialsBanner";
 import {HomePage, CharacterPage, ConsolePage, AssassinsCreed, PlagueTalePage, RedDeadRedemtion, Skyrim, TheLastOfUsPage, TheWitcherPage, TombRaiderPage, UnchartedPage} from './pages/index'
 import Navbar from './components/shared/Navbar';
 
@@ -36,7 +37,12 @@ function App() {
       <Route path='TombRaiderPage' element={<TombRaiderPage/>}/>
       <Route path='UnchartedPage' element={<UnchartedPage/>}/>
     </Routes>
+<<<<<<< HEAD
     <Footer></Footer>
+=======
+    <SocialsBanner/>
+    <Footer/>
+>>>>>>> origin/shared-footer
     </BrowserRouter>
     </>
   );
