@@ -1,16 +1,19 @@
 .footer{
     background-color: #181D21;
     color: white;
-    height: 30vh;
+    height: 40vh;
+    padding: 2rem;
 }
 
 .language-section{
     display: grid;
     justify-content: center;
+    padding-bottom: 1rem;
 }
 
 .rights-section{
     text-align: center;
+    padding: 2rem;
 }
 
 .footer-ul{
