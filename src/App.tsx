@@ -12,18 +12,7 @@ function App() {
     <div>
       <Navbar/>
     </div>
-    <nav>
-      <ul>
-        <li><Link to="AssassinsCreed">Assasins Creed</Link></li>
-        <li><Link to="PlagueTalePage">Plague Tale</Link></li>
-        <li><Link to="RedDeadRedemtion">Red Dead Redemtion</Link></li>
-        <li><Link to="Skyrim">Skyrim</Link></li>
-        <li><Link to="TheLastOfUsPage">The Last of Us</Link></li>
-        <li><Link to="TheWitcherPager">The Witcher 3</Link></li>
-        <li><Link to="TombRaiderPage">Shadow of the Tomb Raider</Link></li>
-        <li><Link to="UnchartedPage">Uncharted 4</Link></li>
-      </ul>
-    </nav>
+    
     <Routes>
       <Route path='/' element={<HomePage/>}/>
       <Route path='CharacterPage' element={<CharacterPage/>}/>
