@@ -1,59 +1,50 @@
-.footer{
-    background-color: #181D21;
-    color: white;
-    height: 40vh;
-    padding: 2rem;
+.footer {
+  background-color: #181d21;
+  color: white;
+  height: 40vh;
+  padding: 2rem;
 }
 
-.language-section{
-    display: grid;
-    justify-content: center;
-    padding-bottom: 1rem;
+.language-section {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 1rem;
 }
 
-.rights-section{
-    text-align: center;
-    padding: 2rem;
+.rights-section {
+  text-align: center;
+  padding: 2rem;
 }
 
-<<<<<<< HEAD
-=======
-.rights-section p{
-    font-size: 0.7rem;
-    color: #707070;
+.rights-section p {
+  font-size: 0.7rem;
+  color: #707070;
 }
 
-.rights-section h4{
-    font-size: 3rem;
-
+.rights-section h4 {
+  font-size: 3rem;
 }
 
->>>>>>> origin/shared-footer
-.footer-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.link-styling{
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
+.link-styling {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
 }
 
-.link-styling:hover{
-    text-decoration: none;
-    color: white;
+.link-styling:hover {
+  text-decoration: none;
+  color: white;
 }
 
-<<<<<<< HEAD
-.link-border{
-    border-right: 1px solid white;
-=======
-.vertical-line{
-Float:left;
- height:50px;
- width:1px;
- background-color: #707070;
->>>>>>> origin/shared-footer
+.vertical-line {
+  float: left;
+  height: 50px;
+  width: 1px;
+  background-color: #707070;
 }

@@ -37,12 +37,10 @@ function App() {
       <Route path='TombRaiderPage' element={<TombRaiderPage/>}/>
       <Route path='UnchartedPage' element={<UnchartedPage/>}/>
     </Routes>
-<<<<<<< HEAD
-    <Footer></Footer>
-=======
+
     <SocialsBanner/>
     <Footer/>
->>>>>>> origin/shared-footer
+
     </BrowserRouter>
     </>
   );

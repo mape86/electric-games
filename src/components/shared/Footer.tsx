@@ -16,11 +16,6 @@ const Footer = () => {
             </section>
             <nav className="footer-nav">
                     <Link to="" className="link-styling link-border" >Privacy</Link>
-<<<<<<< HEAD
-                    <Link to="" className="link-styling link-border" >Legal</Link>
-                    <Link to="" className="link-styling link-border" >Terms</Link>
-                    <Link to="" className="link-styling link-border" >Cookie Policy</Link>
-=======
                     <div className="vertical-line"></div>
                     <Link to="" className="link-styling link-border" >Legal</Link>
                     <div className="vertical-line"></div>
@@ -28,7 +23,7 @@ const Footer = () => {
                     <div className="vertical-line"></div>
                     <Link to="" className="link-styling link-border" >Cookie Policy</Link>
                     <div className="vertical-line"></div>
->>>>>>> origin/shared-footer
+
                     <Link to="" className="link-styling" >Cookie Settings</Link>
             </nav>
         </footer>
