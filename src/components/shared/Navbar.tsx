@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom'
-import {HomePage, CharacterPage, ConsolePage} from '../../pages/index';
 
 const Navbar = () => {
     return (
