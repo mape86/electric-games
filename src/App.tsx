@@ -1,5 +1,6 @@
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import Footer from './components/shared/Footer';
 import {HomePage, CharacterPage, ConsolePage, AssassinsCreed, PlagueTalePage, RedDeadRedemtion, Skyrim, TheLastOfUsPage, TheWitcherPage, TombRaiderPage, UnchartedPage} from './pages/index'
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
       <Route path='UnchartedPage' element={<UnchartedPage/>}/>
     </Routes>
     </BrowserRouter>
+    <Footer></Footer>
     </>
   );
 }

@@ -1,0 +1,22 @@
+.footer{
+    background-color: #181D21;
+    color: white;
+    height: 30vh;
+}
+
+.language-section{
+    display: grid;
+    justify-content: center;
+}
+
+.rights-section{
+    text-align: center;
+}
+
+.footer-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style: none;
+}
