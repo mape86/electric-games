@@ -1,10 +1,16 @@
 .card {
-  background-color: #161c1c90;
+  background-color: #202142;
   color: #fff;
   border-radius: 15px;
   padding: 40px 50px;
   margin: 20px 0;
   position: relative;
+  height: 35rem;
+}
+
+.card-img {
+  aspect-ratio: 1;
+  max-height: 15rem;
 }
 
 .card h3 {

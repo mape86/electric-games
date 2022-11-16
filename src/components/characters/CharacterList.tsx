@@ -31,7 +31,7 @@ const CharacterList = () => {
     }
 
     return(
-        <section>
+        <section className="row">
             {getCharacterList()}
         </section>
     )
