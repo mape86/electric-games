@@ -7,7 +7,7 @@ const ElectricGamesService = (
     () => {
 
         const ElectriGamesEndpoint = {
-            characters: "https://localhost:7003/api/Character",
+            characters: "https://localhost:7003/Character",
             game: "https://localhost:7003/api/Game",
             gameConsole: "https://localhost:7003/api/GameConsole" 
         }
