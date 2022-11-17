@@ -3,3 +3,7 @@
   width: 100%;
   z-index: 9;
 }
+
+.character-header-img {
+  background-image: url(/src/pages/assets/images/headerImages/characterHeader.jpg);
+}

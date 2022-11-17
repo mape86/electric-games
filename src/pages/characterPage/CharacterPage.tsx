@@ -1,10 +1,11 @@
 import CharacterList from "../../components/characters/CharacterList"
 import './CharacterPage.css'
+import "../shared/Pages.css"
 
 const CharacterPage = () => {
     return(
         <>
-            <section className="character-top-section"></section>
+            <section className="page-header character-header-img"></section>
             <section className="container character-container">
                 <CharacterList/>
             </section>

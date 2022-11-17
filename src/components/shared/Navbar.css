@@ -6,7 +6,13 @@
   left: 0;
   width: 100%;
 }
+
 .navbar-custom {
   background-color: #161c1c70;
+  height: 10vh;
+}
+
+.navbar-custom-solid {
+  background-color: #161c1c;
   height: 10vh;
 }
