@@ -9,8 +9,9 @@ import TheLastOfUsPage from "./gameInfoPages/TheLastOfUsPage";
 import TheWitcherPage from "./gameInfoPages/TheWitcherPage";
 import TombRaiderPage from "./gameInfoPages/TombRaiderPage";
 import UnchartedPage from "./gameInfoPages/UnchartedPage";
+import AllGames from "./allGames/AllGames";
 
 
 
 
-export {HomePage, ConsolePage, CharacterPage, AssassinsCreed, PlagueTalePage, RedDeadRedemtion, Skyrim, TheLastOfUsPage, TheWitcherPage, TombRaiderPage, UnchartedPage}
+export {HomePage, AllGames, ConsolePage, CharacterPage, AssassinsCreed, PlagueTalePage, RedDeadRedemtion, Skyrim, TheLastOfUsPage, TheWitcherPage, TombRaiderPage, UnchartedPage}
