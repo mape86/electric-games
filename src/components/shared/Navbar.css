@@ -1,7 +1,12 @@
-/* .navbar {
+.navbar {
   position: fixed;
-} */
+  owerflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .navbar-custom {
-  background-color: #161c1c90;
+  background-color: #161c1c70;
   height: 10vh;
 }
