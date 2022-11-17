@@ -1,0 +1,76 @@
+.home-page {
+  background-color: #161c1c;
+  box-sizing: border-box;
+  color: white;
+  padding: 0;
+  margin: 0;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.header-home-page {
+  background-image: url(/src/pages/homePage/images/thelastofus4.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+.home-page-paragraph {
+  height: 15vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plagues-tale {
+  background-image: url(/src/pages/assets/images/aplaguetale/aplaguetalehero.jpg);
+}
+
+.tomb-raider {
+  background-image: url(/src/pages/assets/images/tombraider/tombraiderhero.jpg);
+}
+
+.the-last-of-us {
+  background-image: url(/src/pages/assets/images/thelastofus/thelastofus1.jpg);
+}
+
+.uncharted {
+  background-image: url(/src/pages/assets/images/uncharted/unchartedhero.jpg);
+}
+.plagues-tale,
+.tomb-raider,
+.the-last-of-us,
+.uncharted,
+.home-page-sections {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.character-home-page {
+  background-color: #112319;
+}
+
+.consoles-home-page {
+  background-color: #0f0e10;
+}
+
+.socials-section {
+  background-color: #515354;
+  color: #dca307;
+  text-align: center;
+  height: 40vh;
+  scroll-snap-align: start;
+}
