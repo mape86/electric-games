@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 import "./HomePage.css";
+import "../shared/Pages.css"
 
 const HomePage = () => {
   return (
     <>
       <div className="home-page">
-        <div className="header-home-page">
+        <div className="page-header header-home-page">
           <h1>Electric Games</h1>
         </div>
 

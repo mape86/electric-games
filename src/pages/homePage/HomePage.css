@@ -11,14 +11,6 @@
 
 .header-home-page {
   background-image: url(/src/pages/assets/images/headerImages/thelastofus4.jpg);
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 85vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
 }
 .home-page-paragraph {
   height: 15vh;
