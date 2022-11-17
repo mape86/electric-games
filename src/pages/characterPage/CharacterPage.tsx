@@ -1,4 +1,4 @@
-import CharacterList from "../components/characters/CharacterList"
+import CharacterList from "../../components/characters/CharacterList"
 import './CharacterPage.css'
 
 const CharacterPage = () => {
