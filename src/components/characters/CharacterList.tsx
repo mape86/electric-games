@@ -1,22 +1,14 @@
-import { useState, useEffect } from "react";
+import {useContext } from "react";
 import CharacterItem from "./CharacterItem";
-import ElectricGamesService from "../../services/ElectricGamesService";
-import ICharacter from "../../interfaces/ICharacter";
+import { CharacterContext } from "../../contexts/CharacterContext";
+//import ElectricGamesService from "../../services/ElectricGamesService";
+import ICharacterContext from "../../interfaces/ICharacterContext";
 
 const CharacterList = () => {
-    const [characters, setCharacters] = useState<ICharacter[]>([]);
+ 
+    const {characters} = useContext(CharacterContext) as ICharacterContext
 
-    useEffect (() =>{
-        getCharacters()
-    }, [])
-
-    const getCharacters = async () => {
-        const charactersFromDb = await ElectricGamesService.getAllCharacters()
-
-        setCharacters(charactersFromDb)
-    }
-
-    const getCharacterList = () => {
+    const getCharacterItem = () => {
         return characters.map((character, i) => (
             <CharacterItem 
                 key={`character-${i}`}
@@ -32,7 +24,7 @@ const CharacterList = () => {
 
     return(
         <section className="row">
-            {getCharacterList()}
+            {getCharacterItem()}
         </section>
     )
 }
