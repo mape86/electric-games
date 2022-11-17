@@ -3,9 +3,12 @@ import './CharacterPage.css'
 
 const CharacterPage = () => {
     return(
-        <section className="container character-container">
-            <CharacterList/>
-        </section>
+        <>
+            <section className="character-top-section"></section>
+            <section className="container character-container">
+                <CharacterList/>
+            </section>
+        </>
     )
 }
 

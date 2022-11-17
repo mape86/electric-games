@@ -15,6 +15,7 @@ import {
   TombRaiderPage,
   UnchartedPage,
 } from "./pages/index";
+import "./pages/index.css"
 import Navbar from "./components/shared/Navbar";
 
 function App() {
