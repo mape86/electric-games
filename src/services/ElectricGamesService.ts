@@ -8,8 +8,8 @@ const ElectricGamesService = (
 
         const ElectriGamesEndpoint = {
             characters: "https://localhost:7003/Character",
-            game: "https://localhost:7003/api/Game",
-            gameConsole: "https://localhost:7003/api/GameConsole" 
+            game: "https://localhost:7003/Game",
+            gameConsole: "https://localhost:7003/GameConsole" 
         }
 
         const getAllCharacters = async () => {
@@ -37,12 +37,18 @@ const ElectricGamesService = (
             return result;
         }
 
+        const getAllGames = async () =>{
+            const result = await axios.get(ElectriGamesEndpoint.game);
+            return result.data; 
+        }
+
         return {
             getAllCharacters, 
             getCharacterById, 
             putCharacter, 
             deleteCharacter, 
-            postCharacter
+            postCharacter,
+            getAllGames
         }
 
 
