@@ -9,7 +9,7 @@ const Navbar = () => {
   useEffect(() => {
     if(window && location.pathname === "/CharacterPage") {
       window.addEventListener("scroll", () =>
-      setHasColor(window.scrollY > 650)
+      setHasColor(window.scrollY > 630)
       );
     }
   }, []);
