@@ -8,8 +8,9 @@ const AllGames = () => {
     return(
         <>
         <section className="page-header game-header-img"></section>
-        <section className="container grid-container"></section>
+        <section className="container grid-container">
             <GameList/>
+        </section>
         </>
     )
 }
