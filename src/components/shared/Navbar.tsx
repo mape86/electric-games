@@ -7,7 +7,7 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if(window && location.pathname === "/CharacterPage") {
+    if(window && location.pathname === "/CharacterPage" || window && location.pathname === "/GamePage") {
       window.addEventListener("scroll", () =>
       setHasColor(window.scrollY > 630)
       );
