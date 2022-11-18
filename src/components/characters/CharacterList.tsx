@@ -24,6 +24,7 @@ const CharacterList = () => {
 
     return(
         <section className="row">
+            <div className="d-flex justify-content-center"><button className="btn btn-outline-success">+</button></div>
             {getCharacterItem()}
         </section>
     )

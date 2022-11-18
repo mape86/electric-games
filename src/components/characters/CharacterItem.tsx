@@ -30,7 +30,6 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
     const cardEditContent = () => (
         <>
         <div className="mb-3">
-            
         <label>Name:</label>
         <input className="form-control bg-dark text-white" type="text" value={nameInput} onChange={(e) => setNameInput(e.target.value) } />
         </div>
