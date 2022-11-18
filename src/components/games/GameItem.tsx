@@ -13,7 +13,7 @@ const GameItem: FC<IGame> = ({id, title, description, platform, releaseYear, pub
                 <h6>Genre: {genre}</h6>
                 <p>Release year: {releaseYear}</p>
                 <p>{description}</p>
-                <p>{price} NOK</p>
+                <p>Price NOK: {price}</p>
                 <p>Publisher: {publisher}</p>
             </Card>
         </article>
