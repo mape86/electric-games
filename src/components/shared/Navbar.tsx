@@ -12,7 +12,7 @@ const Navbar = () => {
       setHasColor(window.scrollY > 630)
       );
     }
-  }, [location.pathname]);
+  },[]);
 
 
     return (
