@@ -24,5 +24,11 @@ const GameList = () =>{
         ))
     }
 
+    return(
+        <section className="row">
+            {getGameItems()}
+        </section>
+    )
+
 }
 export default GameList; 
