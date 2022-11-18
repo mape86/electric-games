@@ -5,12 +5,16 @@
   padding: 40px 50px;
   margin: 20px 0;
   position: relative;
-  min-height: 35rem;
 }
 
-.card-img {
-  aspect-ratio: 1;
-  max-height: 15rem;
+.card-img-top {
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+}
+
+.card-body {
+  height: fit-conent;
 }
 
 .card h3 {
