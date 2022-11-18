@@ -4,6 +4,8 @@ import Card from "../shared/Card";
 import { GameContext } from "../../contexts/GameContext";
 import IGameContext from "../../interfaces/IGameContext";
 import Select from "../shared/Select";
+import { CharacterContext } from "../../contexts/CharacterContext";
+import ICharacterContext from "../../interfaces/ICharacterContext";
 
 const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, image}) => {
     /*TODO: Add images and fix image URL (<img />)*/ 
@@ -13,6 +15,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
     const [gameInput, setGameInput] = useState(game)
     const [descriptionInput, setDescriptionInput] = useState(description)
     const {games} = useContext(GameContext) as IGameContext
+    const {updateCharacter} = useContext(CharacterContext) as ICharacterContext
 
     const cardContent = () => (
         <>
@@ -55,6 +58,20 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
         </>
     )
 
+    const handleUpdate = () => {
+        const character: ICharacter = {
+            id,
+            image,
+            name: nameInput,
+            gender: genderInput,
+            game: gameInput,
+            description: descriptionInput
+        }
+
+        updateCharacter(character)
+        setShouldEdit(false)
+    }
+
     return (
         <article className="d-flex col-lg-4 col-md-6 col-sm-12 g-4">
             <Card>
@@ -65,7 +82,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
                 <div style={{flex: 1}} className="d-flex justify-content-end align-items-end w-100">
                 {shouldEdit ?
                 <>
-                <button className="btn btn-outline-success mx-2 ">Save</button>
+                <button className="btn btn-outline-success mx-2 " onClick={handleUpdate}>Save</button>
                 <button className="btn btn-outline-danger" onClick={() => setShouldEdit(false)}>Cancel</button> 
                 </> 
                 :

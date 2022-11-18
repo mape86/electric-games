@@ -24,8 +24,15 @@ const CharacterProvider = ({children} : Props) => {
         setCharacters(charactersFromDb)
     }
 
+    const updateCharacter = async (character: ICharacter) => {
+        await ElectricGamesService.putCharacter(character)
+        
+        getCharacters()
+
+    }
+
     return (
-        <CharacterContext.Provider value={{characters}}>
+        <CharacterContext.Provider value={{characters, updateCharacter}}>
             {children}
         </CharacterContext.Provider>
     )
