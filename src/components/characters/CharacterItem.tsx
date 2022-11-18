@@ -10,7 +10,8 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
                 <img className="card-img-top" src={`https://localhost:7003/images/characters/${image}`} alt="" />
                 <h3>{name}</h3>
                 <h5> ID: {id}</h5>
-                <p>A {gender}, appearing in {game}.</p>
+                <p>Gender: {gender}</p>
+                <p>Appearing in: {game}.</p>
                 <p><i>"{description}"</i></p>
             </Card>
         </article>
