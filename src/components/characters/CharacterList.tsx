@@ -3,6 +3,7 @@ import CharacterItem from "./CharacterItem";
 import { CharacterContext } from "../../contexts/CharacterContext";
 //import ElectricGamesService from "../../services/ElectricGamesService";
 import ICharacterContext from "../../interfaces/ICharacterContext";
+import PlusIcon from "../icons/Plus";
 
 const CharacterList = () => {
  
@@ -24,7 +25,7 @@ const CharacterList = () => {
 
     return(
         <section className="row">
-            <div className="d-flex justify-content-center"><button className="btn btn-outline-success">+</button></div>
+            <div className="d-flex justify-content-center"><button className="btn btn-outline-success"><PlusIcon/></button></div>
             {getCharacterItem()}
         </section>
     )
