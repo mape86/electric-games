@@ -6,7 +6,7 @@ const CharacterPage = () => {
     return(
         <>
             <section className="page-header character-header-img"></section>
-            <section className="container character-container">
+            <section className="container grid-container">
                 <CharacterList/>
             </section>
         </>
