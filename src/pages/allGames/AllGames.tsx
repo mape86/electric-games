@@ -1,9 +1,14 @@
-
+import GameList from "../../components/games/GameList"
+import "../shared/Pages.css"
 
 const AllGames = () => {
 
     return(
-        <section></section>
+        <>
+        <section className="page-header game-header-img"></section>
+        <section className="container"></section>
+            <GameList/>
+        </>
     )
 }
 
