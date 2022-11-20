@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 import "./HomePage.css";
-import "../shared/Pages.css"
+import "../shared/Pages.css";
 import HomepageGameSection from "../../components/homePage/HomepageGameSection";
 import { homePageData } from "./data";
 
@@ -20,10 +20,10 @@ const HomePage = () => {
           </p>
         </section>
 
-        {
-          homePageData.map((entry) => <HomepageGameSection key={entry.className} {...entry}/>)
-        }
-        
+        {homePageData.map((entry) => (
+          <HomepageGameSection key={entry.className} {...entry} />
+        ))}
+
         <section className="character-home-page home-page-sections">
           <h1>Characters</h1>
         </section>
