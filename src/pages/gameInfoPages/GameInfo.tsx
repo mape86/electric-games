@@ -10,6 +10,10 @@ const classNameMap: Record<string, string> = {
   "Shadow Of The Tomb Raider": "tombraider",
   "Last of Us: Part II": "lastofus",
   "Uncharted 4: A Thief's End": "uncharted",
+  "The Witcher 3: Wild Hunt": "thewitcher",
+  "Red Dead Redemption II": "reddead",
+  "Assassins Creed: Unity": "assassins",
+  "The Elder Scrolls V: Skyrim": "skyrim",
 };
 
 const GameInfo = ({ game }: GameInfoProps) => {

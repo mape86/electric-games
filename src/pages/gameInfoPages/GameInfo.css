@@ -13,3 +13,19 @@
 .uncharted.game-info-wrapper .game-info-header {
   background-image: url(/src/pages/assets/images/uncharted/unchartedhero.jpg);
 }
+
+.thewitcher.game-info-wrapper .game-info-header {
+  background-image: url(/src/pages/assets/images/thewitcher/thewitcherhero.jpg);
+}
+
+.reddead.game-info-wrapper .game-info-header {
+  background-image: url(/src/pages/assets/images/reddeadredemption/reddeadhero.jpg);
+}
+
+.assassins.game-info-wrapper .game-info-header {
+  background-image: url(/src/pages/assets/images/assassins/assassinhero.jpg);
+}
+
+.skyrim.game-info-wrapper .game-info-header {
+  background-image: url(/src/pages/assets/images/skyrim/skyrimhero.jpg);
+}
