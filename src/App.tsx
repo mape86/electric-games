@@ -1,9 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Footer from "./components/shared/Footer";
-import { HomePage, AllGames, CharacterPage, ConsolePage } from "./pages/index";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./pages/index.css";
 import Navbar from "./components/shared/Navbar";
+import Footer from "./components/shared/Footer";
+import { HomePage, AllGames, CharacterPage, ConsolePage } from "./pages/index";
 import GameInfo from "./pages/gameInfoPages/GameInfo";
 
 function App() {
