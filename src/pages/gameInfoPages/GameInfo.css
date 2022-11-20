@@ -1,0 +1,15 @@
+.aplaguetale.game-info-wrapper .game-info-header {
+  background-image: url(/src/pages/assets/images/aplaguetale/aplaguetalehero.jpg);
+}
+
+.lastofus.game-info-wrapper .game-info-header {
+  background-image: url(/src/pages/assets/images/thelastofus/thelastofushero.jpg);
+}
+
+.tombraider.game-info-wrapper .game-info-header {
+  background-image: url(/src/pages/assets/images/tombraider/tombraiderhero.jpg);
+}
+
+.uncharted.game-info-wrapper .game-info-header {
+  background-image: url(/src/pages/assets/images/uncharted/);
+}

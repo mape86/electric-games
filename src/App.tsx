@@ -15,8 +15,9 @@ import {
   TombRaiderPage,
   UnchartedPage,
 } from "./pages/index";
-import "./pages/index.css"
+import "./pages/index.css";
 import Navbar from "./components/shared/Navbar";
+import GameInfo from "./pages/gameInfoPages/GameInfo";
 
 function App() {
   return (
@@ -31,14 +32,7 @@ function App() {
           <Route path="AllGames" element={<AllGames />} />
           <Route path="CharacterPage" element={<CharacterPage />} />
           <Route path="ConsolePage" element={<ConsolePage />} />
-          <Route path="AssassinsCreed" element={<AssassinsCreed />} />
-          <Route path="PlagueTalePage" element={<PlagueTalePage />} />
-          <Route path="RedDeadRedemtion" element={<RedDeadRedemtion />} />
-          <Route path="Skyrim" element={<Skyrim />} />
-          <Route path="TheLastOfUsPage" element={<TheLastOfUsPage />} />
-          <Route path="TheWitcherPager" element={<TheWitcherPage />} />
-          <Route path="TombRaiderPage" element={<TombRaiderPage />} />
-          <Route path="UnchartedPage" element={<UnchartedPage />} />
+          <Route path="GameInfo" element={<GameInfo game={game} />} />
         </Routes>
 
         <Footer />
