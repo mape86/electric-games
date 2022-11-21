@@ -27,16 +27,18 @@ const CharacterProvider = ({children} : Props) => {
     const updateCharacter = async (character: ICharacter) => {
         await ElectricGamesService.putCharacter(character)
         
-        getCharacters()
+       await getCharacters()
 
     }
 
-    const filterCharacter = async (characters: ICharacter) => {
-        
+    const addCharacter = async (character: ICharacter) => {
+        await ElectricGamesService.postCharacter(character)
+
+        await getCharacters()
     }
 
     return (
-        <CharacterContext.Provider value={{characters, updateCharacter, filterCharacter}}>
+        <CharacterContext.Provider value={{characters, updateCharacter, addCharacter}}>
             {children}
         </CharacterContext.Provider>
     )

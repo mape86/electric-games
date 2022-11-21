@@ -2,7 +2,8 @@ import { useState, ChangeEvent} from "react";
 import ElectricGamesService from "../../services/ElectricGamesService";
 
 const UploadImage = () => {
-const [image, setImage] = useState<File | null>(null)
+
+    const [image, setImage] = useState<File | null>(null)
 
 const setImageHandler = (e: ChangeEvent<HTMLInputElement>) => {
         const {files} = e.target;
@@ -19,6 +20,7 @@ const setImageHandler = (e: ChangeEvent<HTMLInputElement>) => {
             ElectricGamesService.uploadImage(image)
         }
     }
+    
 }
 
-    export default UploadImage
+export default UploadImage

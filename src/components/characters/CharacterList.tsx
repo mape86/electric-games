@@ -7,45 +7,24 @@ import ICharacter from "../../interfaces/ICharacter";
 import Select from "../shared/Select";
 import GameList from "../games/GameList";
 import AddCharacterModal from "./AddCharacterModal";
+import { GameContext } from "../../contexts/GameContext";
+import IGameContext from "../../interfaces/IGameContext";
  
  
 // game: ICharacter, gender: ICharacter
 
 const CharacterList = () => {
  
-    const {characters} = useContext(CharacterContext) as ICharacterContext
+    const {characters, addCharacter} = useContext(CharacterContext) as ICharacterContext
+    const {games} = useContext(GameContext) as IGameContext
+
+    const [gameFilter, setGameFilter] = useState("");
+    const [genderFilter, setGenderFilter] = useState("");
+    const [modalIsOpen, setModalIsOpen] = useState(false)
     
-        const [shouldFilter, setShouldFilter] = useState(false)
-        const [gameFilter, setGameFilter] = useState("All");
-        const [genderFilter, setGenderFilter] = useState("All");
-        const {filterCharacter} = useContext(CharacterContext) as ICharacterContext
-
-    const filterCharacters = () => {
-        <>
-        <div>
-            <label>Game:</label>
-            <input className="form-control bg-dark text-white" type="text" value={gameFilter} onChange={(e) => setGameFilter(e.target.value)}/>
-        </div>
-        <div>
-            <Select
-                name='game:'
-                options={characters.map((character) => character.game)}
-                currentValue={gameFilter}
-                onChange={(value: string) => setGameFilter (value)}
-            />
-            <Select
-                name='gender:'
-                options={characters.map((character) => character.gender)}
-                currentValue={genderFilter}
-                onChange={(value: string) => setGenderFilter (value)}
-            />
-        </div>
-        </>
-
-    }
-
     const getCharacterItem = () => {
-        return characters.map((character, i) => (
+        //Filtering character array to only return characters matching filter coming from State, then map out the list. If noe filter is active, the whole list will be returned.
+        return characters.filter((character) => character.game.includes(gameFilter) && character.gender.includes(genderFilter)).map((character, i) => (
             <CharacterItem 
                 key={`character-${i}`}
                 id= {character.id}
@@ -58,13 +37,40 @@ const CharacterList = () => {
         ))
     }
 
+    const handleAdd = (character: ICharacter) => {
+        addCharacter(character)
+        setModalIsOpen(false)
+    }
+
     return(
-        <section className="row">
-            <div className="d-flex justify-content-center">
-                <button className="btn btn-outline-success" onClick={AddCharacterModal}>{AddCharacterModal()}<PlusIcon/></button>
+        <>
+        <section className="row pb-5">
+            <>
+            <div className="d-flex align-items-center flex-column">
+                <button className="btn btn-outline-success mb-4" onClick={() => setModalIsOpen(true)}><PlusIcon/></button>
+                <div className="d-flex w-100 align-items-center justify-content-center">
+                    <Select
+                    isFilter
+                    name='game:'
+                    options={games.map((game) => game.title)}
+                    currentValue={gameFilter}
+                    onChange={(value: string) => setGameFilter (value)}
+                    />
+                    <Select
+                    isFilter
+                    name='gender:'
+                    options={["Male", "Female"]}
+                    currentValue={genderFilter}
+                    onChange={(value: string) => setGenderFilter (value)}
+                    />
+                </div>
             </div>
-            {getCharacterItem()}
+                
+            {getCharacterItem().length > 0 ? getCharacterItem() : <h2>No matching character found</h2>}
+            </>
         </section>
+        {modalIsOpen && <AddCharacterModal handleAdd={handleAdd} onClose={() => setModalIsOpen(false)}/>}
+        </>
     )
 }
 

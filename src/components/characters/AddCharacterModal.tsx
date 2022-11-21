@@ -1,13 +1,20 @@
 import UploadImage from "../shared/UploadImage"
-import Card from "../shared/Card"
 import { ChangeEvent, useState } from "react"
+import "./AddCharacterModal.css"
+import ICharacter from "../../interfaces/ICharacter"
 
-const AddCharacterModal = () => {
+interface ModalProps {
+    handleAdd: (c: ICharacter) => void
+    onClose: () => void
+}
 
-    const [name, setName] = useState<string>("Name not entered")
-    const [game, setGame] = useState<string>("Game not entered")
-    const [gender, setGender] = useState<string>("Gender not entered")
-    const [description, setDescription] = useState<string>("No description entered")
+const AddCharacterModal = ({handleAdd, onClose}:ModalProps) => {
+
+    const [name, setName] = useState<string>("")
+    const [game, setGame] = useState<string>("")
+    const [gender, setGender] = useState<string>("")
+    const [description, setDescription] = useState<string>("")
+    const [image, setImage] = useState<string>("")
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const {name, value} = e.currentTarget;
@@ -25,25 +32,48 @@ const AddCharacterModal = () => {
             case "description":
                 setDescription(value)
             break;
+            case "image":
+                setImage(value)
+            break;
         }
+    }
+    
+    const saveCharacter = () => {
+        const character = {
+            name: name,
+            game: game,
+            gender: gender,
+            description: description,
+            image: image
+        }
+        handleAdd(character)
     }
 
     return (
-        <Card className="">
+        <div id="overlay">
+        <div style={{width: "60%", padding: "50px", borderRadius: "10px", backgroundColor: "darkgray", position: "relative"}} >
+            <button style={{position: "absolute", top: "20px", right: "20px"}} onClick={onClose} >X</button>
             <label>Name:</label>
-            <input name="name" className="form-control bg-dark text-white" type="text" value="Enter name" onChange={handleChange}/>
+            <input name="name" className="form-control bg-dark text-white" type="text" value={name} onChange={handleChange}/>
             <label>Gender:</label>
-            <input name="gender" type="select" />
+            <select name="gender" className="form-control bg-dark text-white">
+                <option value={gender}>Female</option>
+                <option value={gender}>Male</option>
+            </select>
             <label>Game:</label>
             <input name="game" className="form-control bg-dark text-white" type="text" value={game} onChange={handleChange}/>
             <label>Description:</label>
-            <textarea name="description" className="form-control bg-dark text-white" rows={10} value="Enter description" />
+            <textarea name="description" className="form-control bg-dark text-white" rows={10} value={description} onChange={(e) => setDescription(e.target.value)}/>
             <label>Image:</label>
-            <input onChange={UploadImage} type="file"/>
-            <div>
-                <button className="btn btn-sm btn-outline-ligth">Upload image</button>
+            <input onChange={UploadImage} type="file" value={image}/>
+            <div className="mb-2 mt-2">
+                <button className="btn btn-outline-light">Upload image</button>
             </div>
-        </Card>
+            <div>
+                <button className="btn btn-outline-success" onClick={saveCharacter}>Save character</button>
+            </div>
+        </div>
+        </div>
     )
 }
 
