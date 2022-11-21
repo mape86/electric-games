@@ -2,22 +2,22 @@ export const homePageData = [
     {
         title: "A Plagues Tale",
         className: "plagues-tale",
-        href: "PlagueTalePage"
+        href: "PlagueTale"
     },
     {
         title: "Shadow of the Tomb Raider",
         className: "tomb-raider",
-        href: "TombRaiderPage"
+        href: "TombRaider"
     },
     {
         title: "The Last of Us",
         className: "the-last-of-us",
-        href: "TheLastOfUsPage"
+        href: "TheLastOfUs"
     },
     {
         title: "Uncharted 4",
         className: "uncharted",
-        href: "UnchartedPage"
+        href: "Uncharted"
     },
 
 ]

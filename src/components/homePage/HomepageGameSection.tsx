@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-interface SectioProps {
+interface SectionProps {
     className: string
     title: string
     href: string
 }
 
-const  HomepageGameSection = ({className, title, href}:SectioProps) => {
+const  HomepageGameSection = ({className, title, href}:SectionProps) => {
   return (
     <section className={className}>
     <h1>{title}</h1>
