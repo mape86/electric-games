@@ -6,6 +6,7 @@ import IGameContext from "../../interfaces/IGameContext";
 import Select from "../shared/Select";
 import { CharacterContext } from "../../contexts/CharacterContext";
 import ICharacterContext from "../../interfaces/ICharacterContext";
+import ElectricGamesService from "../../services/ElectricGamesService";
 
 const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, image}) => {
     /*TODO: Add images and fix image URL (<img />)*/ 
@@ -15,7 +16,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
     const [gameInput, setGameInput] = useState(game)
     const [descriptionInput, setDescriptionInput] = useState(description)
     const {games} = useContext(GameContext) as IGameContext
-    const {updateCharacter} = useContext(CharacterContext) as ICharacterContext
+    const {updateCharacter, deleteCharacter} = useContext(CharacterContext) as ICharacterContext
 
     const cardContent = () => (
         <>
@@ -70,6 +71,10 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
         updateCharacter(character)
         setShouldEdit(false)
     }
+
+    // const handleDelete = (id: number) => {
+    //     deleteCharacter(id)
+    // }
 
     return (
         <article className="d-flex col-lg-4 col-md-6 col-sm-12 g-4">

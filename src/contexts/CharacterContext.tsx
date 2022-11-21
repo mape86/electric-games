@@ -27,7 +27,7 @@ const CharacterProvider = ({children} : Props) => {
     const updateCharacter = async (character: ICharacter) => {
         await ElectricGamesService.putCharacter(character)
         
-       await getCharacters()
+        await getCharacters()
 
     }
 
@@ -37,8 +37,16 @@ const CharacterProvider = ({children} : Props) => {
         await getCharacters()
     }
 
+    const deleteCharacter = async (id: number) => {
+        await ElectricGamesService.deleteCharacter(id)
+        const newCharacterList = characters.filter((character) => character.id != id)
+        setCharacters(newCharacterList)
+
+        await getCharacters()
+    }
+
     return (
-        <CharacterContext.Provider value={{characters, updateCharacter, addCharacter}}>
+        <CharacterContext.Provider value={{characters, updateCharacter, addCharacter, deleteCharacter}}>
             {children}
         </CharacterContext.Provider>
     )
