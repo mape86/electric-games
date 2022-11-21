@@ -19,7 +19,7 @@ function App() {
           <Route path="AllGames" element={<AllGames />} />
           <Route path="CharacterPage" element={<CharacterPage />} />
           <Route path="ConsolePage" element={<ConsolePage />} />
-          <Route path="GameInfo" element={<GameInfo game={game} />} />
+          {/* <Route path="GameInfo" element={<GameInfo game={game} />} /> */}
         </Routes>
 
         <Footer />
