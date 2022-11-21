@@ -29,6 +29,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
     )
 
     const cardEditContent = () => (
+        //Function using a Select component retrieve original values in input fields, and enables editing with useState. Using gameContext to map the games the characters are in.
         <>
         <div className="mb-3">
         <label>Name:</label>
@@ -76,6 +77,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
     //     deleteCharacter(id)
     // }
 
+    //Using ternary operator to return edited content if edited, else return the full orginial list. 
     return (
         <article className="d-flex col-lg-4 col-md-6 col-sm-12 g-4">
             <Card>
