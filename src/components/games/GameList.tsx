@@ -109,7 +109,7 @@ const GameList = () =>{
             </div>
         </section>
         <section className="row">
-            {filterByGenre ? getGamesByGenre()  : getAllGameItems() }
+            {filterByGenre  ? getGamesByGenre()  : getAllGameItems() }
         </section>
         </>
     )
