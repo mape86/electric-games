@@ -31,8 +31,12 @@ const CharacterProvider = ({children} : Props) => {
 
     }
 
+    const filterCharacter = async (characters: ICharacter) => {
+        
+    }
+
     return (
-        <CharacterContext.Provider value={{characters, updateCharacter}}>
+        <CharacterContext.Provider value={{characters, updateCharacter, filterCharacter}}>
             {children}
         </CharacterContext.Provider>
     )

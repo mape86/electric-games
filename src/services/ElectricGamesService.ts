@@ -9,7 +9,8 @@ const ElectricGamesService = (
         const ElectriGamesEndpoint = {
             characters: "https://localhost:7003/Character",
             game: "https://localhost:7003/Game",
-            gameConsole: "https://localhost:7003/GameConsole" 
+            gameConsole: "https://localhost:7003/GameConsole",
+            imageUpload: "https://localhost:7003/imageupload"
         }
 
         const getAllCharacters = async () => {
@@ -42,13 +43,28 @@ const ElectricGamesService = (
             return result.data; 
         }
 
+        const uploadImage = async (image: File) => {
+            const formData = new FormData();
+            formData.append("file", image)
+            
+            const result = await axios({
+                url: ElectriGamesEndpoint.imageUpload,
+                method: "POST",
+                data: formData,
+                headers:{"content-type" : "multipart/form-data"}
+            })
+
+            formData.delete("file")
+        }
+
         return {
             getAllCharacters, 
             getCharacterById, 
             putCharacter, 
             deleteCharacter, 
             postCharacter,
-            getAllGames
+            getAllGames,
+            uploadImage
         }
 
 
