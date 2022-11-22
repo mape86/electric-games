@@ -84,7 +84,7 @@ const AddCharacterModal = ({handleAdd, onClose}:ModalProps) => {
             <input name="game" className="form-control bg-dark text-white" type="text" value={game} onChange={handleChange}/>
             <label>Description:</label>
             <textarea name="description" className="form-control bg-dark text-white" rows={10} value={description} onChange={(e) => setDescription(e.target.value)}/>
-            <label>Image:</label>
+            <label>Upload image:</label>
             <input id="upload" onChange={setImageHandler} type="file"/>
             <div className="mb-2 mt-2">
                 <button className="btn btn-outline-light mx-2" onClick={imageUpload}>Upload image</button>
