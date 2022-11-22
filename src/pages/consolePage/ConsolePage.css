@@ -1,8 +1,4 @@
 .console-header-img{
     background-image: url(/src/pages/assets/images/headerImages/consoles-page-header.jpg);
-    height: 50vh;
-    background-repeat: no-repeat;
-    background-size:contain;
     background-position: center;
-    background-color: #E2E2E2;
 }

@@ -13,7 +13,7 @@ const Navbar = () => {
   
   
   useEffect(() => {
-    const headerShouldChange = location.pathname === "/CharacterPage" || location.pathname === "/AllGames"
+    const headerShouldChange = location.pathname === "/CharacterPage" || location.pathname === "/AllGames" || location.pathname === "/ConsolePage"
     
     if(window && !headerShouldChange) window.removeEventListener("scroll", handleScroll)
   
