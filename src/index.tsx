@@ -5,17 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CharacterProvider from './contexts/CharacterContext';
 import GameProvider from './contexts/GameContext';
+import GameConsoleProvider from './contexts/GameConsoleContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <GameConsoleProvider>
       <GameProvider>
         <CharacterProvider>
           <App />
         </CharacterProvider>
       </GameProvider>
+    </GameConsoleProvider>
   </React.StrictMode>
 );
 

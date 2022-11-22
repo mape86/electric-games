@@ -43,6 +43,11 @@ const ElectricGamesService = (
             return result.data; 
         }
 
+        const getAllConsoles = async () =>{
+            const result = await axios.get(ElectriGamesEndpoint.gameConsole); 
+            return result.data; 
+        }
+
         const uploadImage = async (image: File) => {
             const formData = new FormData();
             formData.append("file", image)
@@ -64,6 +69,7 @@ const ElectricGamesService = (
             deleteCharacter, 
             postCharacter,
             getAllGames,
+            getAllConsoles,
             uploadImage
         }
 
