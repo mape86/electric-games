@@ -49,7 +49,7 @@ const GameList = () =>{
                 </div>
             </div>
         </section>
-        <section className="row">
+        <section className="row pb-4">
         {getGameItems().length > 0 ? getGameItems() : <h2 className="text-white p-5 text-center">No matching games found</h2>}
         </section>
         </>
