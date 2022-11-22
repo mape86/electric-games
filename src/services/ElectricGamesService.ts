@@ -10,7 +10,7 @@ const ElectricGamesService = (
             characters: "https://localhost:7003/Character",
             game: "https://localhost:7003/Game",
             gameConsole: "https://localhost:7003/GameConsole",
-            imageUpload: "https://localhost:7003/imageupload"
+            imageUpload: "https://localhost:7003/api/ImageUpload"
         }
 
         const getAllCharacters = async () => {
@@ -48,9 +48,9 @@ const ElectricGamesService = (
             return result.data; 
         }
 
-        const uploadImage = async (image: File) => {
+        const uploadImage = async (img: File) => {
             const formData = new FormData();
-            formData.append("file", image)
+            formData.append("file", img)
             
             const result = await axios({
                 url: ElectriGamesEndpoint.imageUpload,
