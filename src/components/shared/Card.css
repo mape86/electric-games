@@ -10,6 +10,10 @@
   object-fit: fill;
 }
 
+.character-img {
+  width: 80%;
+}
+
 .card-body {
   height: fit-conent;
 }

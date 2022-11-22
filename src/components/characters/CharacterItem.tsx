@@ -82,7 +82,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
     return (
         <article className="d-flex col-lg-4 col-md-6 col-sm-12 g-4">
             <Card>
-                <img className="card-img-top" src={`https://localhost:7003/images/characters/${image}`} alt="" />
+                <img className="card-img-top character-img" src={`https://localhost:7003/images/characters/${image}`} alt="" />
                 <div style={{flex: 1}} className="p-3 d-flex flex-column">
                 {shouldEdit ? cardEditContent() : cardContent()}
             
