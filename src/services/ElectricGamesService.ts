@@ -56,7 +56,7 @@ const ElectricGamesService = (
                 url: ElectriGamesEndpoint.imageUpload,
                 method: "POST",
                 data: formData,
-                headers:{"content-type" : "multipart/form-data"}
+                headers:{"Content-Type" : "multipart/form-data"}
             })
 
             formData.delete("file")
