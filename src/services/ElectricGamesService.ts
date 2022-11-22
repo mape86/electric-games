@@ -10,7 +10,7 @@ const ElectricGamesService = (
             characters: "https://localhost:7003/Character",
             game: "https://localhost:7003/Game",
             gameConsole: "https://localhost:7003/GameConsole",
-            imageUpload: "https://localhost:7003/api/ImageUpload"
+            imageUpload: "https://localhost:7003/ImageUpload"
         }
 
         const getAllCharacters = async () => {
