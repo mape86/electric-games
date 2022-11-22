@@ -9,7 +9,8 @@ const GameConsoleItem: FC<IGameConsole> = ({id, model, brand, price, description
         <Card>
             <img className="card-img-top" src={`https://localhost:7003/images/consoles/${image}`} alt="console"/>
             <h3>{brand}</h3>
-            <h3>{model}</h3>
+            <h4>{model}</h4>
+            <h5>ID: {id}</h5>
             <p>{description}</p>
             <h4>Price NOK: {price}</h4>
         </Card>

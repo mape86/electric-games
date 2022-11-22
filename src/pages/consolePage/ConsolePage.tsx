@@ -1,10 +1,14 @@
+import GameConsoleList from '../../components/consoles/GameConsoleList'
 import '../consolePage/ConsolePage.css'
 
 const ConsolePage = () => {
     return(
-        <section className="header-img-section">
-            <h1>Console Page</h1>
+        <>
+        <section className="console-header-img page-header"></section>
+        <section className="container grid-container">
+            <GameConsoleList/>
         </section>
+        </>
     )
 }
 
