@@ -1,3 +1,6 @@
+import axios from 'axios';
+import React, {useEffect, useState} from 'react'
+import {useParams} from 'react-router-dom'
 import IGame from "../../interfaces/IGame";
 import "./GameInfo.css";
 
@@ -18,6 +21,21 @@ const classNameMap: Record<string, string> = {
 
 const GameInfo = ({ game }: GameInfoProps) => {
   const gameTitleClassName = classNameMap[game.title];
+
+  const {title} = useParams()
+  const [post, setPost] = useState({})
+
+  useEffect(() => {
+    const fetch = async () => {
+      try{
+        const{data} = await axios.get(`http://localhost:3000/${title}`)
+        setPost(data)
+      }catch(error){
+        console.error(error)
+    } 
+    }
+    fetch()
+  }, [])
 
   return (
     <div className={`${gameTitleClassName} gameinfo-page-wrapper`}>

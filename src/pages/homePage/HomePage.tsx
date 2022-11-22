@@ -4,6 +4,8 @@ import "./HomePage.css";
 import "../shared/Pages.css";
 import HomepageGameSection from "../../components/homePage/HomepageGameSection";
 import { homePageData } from "./data";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 
 const HomePage = () => {
   return (
