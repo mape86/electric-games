@@ -38,7 +38,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
         <div className="mb-3">
         <Select 
         name='Gender:'
-        options={["Male", "Female"]} 
+        options={["Female", "Male"]} 
         currentValue={genderInput} 
         onChange={(value: string) => setGenderInput(value)}
         />
@@ -55,7 +55,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
         <label>Description:</label>
         <textarea className="form-control bg-dark text-white" rows={10} value={descriptionInput} onChange={(e) => setDescriptionInput(e.target.value)}></textarea>
         </div>
-        <div className="d-flex align-self- justify-content-end w-100"></div>
+        <div className="d-flex align-self justify-content-end w-100"></div>
         </>
     )
 
@@ -73,9 +73,10 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
         setShouldEdit(false)
     }
 
-    // const handleDelete = (id: number) => {
-    //     deleteCharacter(id)
-    // }
+    const handleDelete = (id: number) => {
+        deleteCharacter(id)
+        console.log(id)
+    }
 
     //Using ternary operator to return edited content if edited, else return the full orginial list. 
     return (
@@ -93,7 +94,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
                 </> 
                 :
                 <>
-                <button className="btn btn-sm btn-outline-light mx-2">Delete</button>
+                <button className="btn btn-sm btn-outline-light mx-2" onClick={() => handleDelete}>Delete</button>
                 <button className="btn btn-sm btn-outline-light" onClick={() => setShouldEdit(true)}>Edit</button>
                 </>
                 }

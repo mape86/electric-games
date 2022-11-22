@@ -10,3 +10,18 @@
   width: 100%;
   background-color: #00000088;
 }
+
+#layout {
+  width: "60%";
+  padding: "50px";
+  borderradius: "10px";
+  background-color: #161c1c;
+  color: white;
+  position: "relative";
+}
+
+#modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

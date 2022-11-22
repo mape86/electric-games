@@ -52,14 +52,14 @@ const CharacterList = () => {
                 <div className="d-flex w-100 align-items-center justify-content-center">
                     <Select
                     isFilter
-                    name='game:'
+                    name='Filter by game:'
                     options={games.map((game) => game.title)}
                     currentValue={gameFilter}
                     onChange={(value: string) => setGameFilter (value)}
                     />
                     <Select
                     isFilter
-                    name='gender:'
+                    name='Filter by gender:'
                     options={["Male", "Female"]}
                     currentValue={genderFilter}
                     onChange={(value: string) => setGenderFilter (value)}

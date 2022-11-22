@@ -51,26 +51,27 @@ const AddCharacterModal = ({handleAdd, onClose}:ModalProps) => {
 
     return (
         <div id="overlay">
-        <div style={{width: "60%", padding: "50px", borderRadius: "10px", backgroundColor: "darkgray", position: "relative"}} >
-            <button style={{position: "absolute", top: "20px", right: "20px"}} onClick={onClose} >X</button>
+        <div id="layout" >
+            <button id="modal-close-btn" onClick={onClose}>X</button>
             <label>Name:</label>
             <input name="name" className="form-control bg-dark text-white" type="text" value={name} onChange={handleChange}/>
             <label>Gender:</label>
-            <select name="gender" className="form-control bg-dark text-white">
-                <option value={gender}>Female</option>
-                <option value={gender}>Male</option>
+            <select value={gender} name="gender" className="form-control bg-dark text-white" onChange={(e) => setGender(e.target.value)}>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
             </select>
             <label>Game:</label>
             <input name="game" className="form-control bg-dark text-white" type="text" value={game} onChange={handleChange}/>
             <label>Description:</label>
             <textarea name="description" className="form-control bg-dark text-white" rows={10} value={description} onChange={(e) => setDescription(e.target.value)}/>
             <label>Image:</label>
-            <input onChange={UploadImage} type="file" value={image}/>
+            <input id="upload" onChange={UploadImage} type="file" value={image}/>
             <div className="mb-2 mt-2">
-                <button className="btn btn-outline-light">Upload image</button>
+                <button className="btn btn-outline-light mx-2">Upload image</button>
             </div>
-            <div>
-                <button className="btn btn-outline-success" onClick={saveCharacter}>Save character</button>
+            <div className="d-flex justify-content-between align-items-end">
+                <button className="btn btn-outline-success mx-2 mb-2" onClick={saveCharacter}>Save character</button>
+                <button className="btn btn-outline-danger mx-2 mb-2" onClick={onClose}>Cancel</button>
             </div>
         </div>
         </div>
