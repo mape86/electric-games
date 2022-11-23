@@ -49,12 +49,14 @@ const AddCharacterModal = ({handleAdd, onClose}:ModalProps) => {
     
                 setImg(file)
             }
+            
         }
     
     const imageUpload = () => {
         if(img!=null){
             ElectricGamesService.uploadImage(img)
             console.log(img)
+            setImage(img.name)
             }
         }
     
@@ -77,6 +79,7 @@ const AddCharacterModal = ({handleAdd, onClose}:ModalProps) => {
             <input name="name" className="form-control bg-dark text-white" type="text" value={name} onChange={handleChange}/>
             <label>Gender:</label>
             <select value={gender} name="gender" className="form-control bg-dark text-white" onChange={(e) => setGender(e.target.value)}>
+                <option value="">Not given</option>
                 <option value="Female">Female</option>
                 <option value="Male">Male</option>
             </select>
@@ -84,6 +87,7 @@ const AddCharacterModal = ({handleAdd, onClose}:ModalProps) => {
             <input name="game" className="form-control bg-dark text-white" type="text" value={game} onChange={handleChange}/>
             <label>Description:</label>
             <textarea name="description" className="form-control bg-dark text-white" rows={10} value={description} onChange={(e) => setDescription(e.target.value)}/>
+            <input name="image"/>
             <label>Upload image:</label>
             <input id="upload" onChange={setImageHandler} type="file"/>
             <div className="mb-2 mt-2">
