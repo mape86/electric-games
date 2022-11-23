@@ -73,9 +73,9 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
         setShouldEdit(false)
     }
 
-    const handleDelete = (id: number) => {
-        deleteCharacter(id)
+    const handleDelete = (id?: number) => {
         console.log(id)
+        deleteCharacter(Number(id)) 
     }
 
     //Using ternary operator to return edited content if edited, else return the full orginial list. 
@@ -94,7 +94,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
                 </> 
                 :
                 <>
-                <button className="btn btn-sm btn-outline-light mx-2" onClick={() => handleDelete}>Delete</button>
+                <button className="btn btn-sm btn-outline-light mx-2" onClick={() => handleDelete(id)}>Delete</button>
                 <button className="btn btn-sm btn-outline-light" onClick={() => setShouldEdit(true)}>Edit</button>
                 </>
                 }
