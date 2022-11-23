@@ -21,7 +21,6 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
     const cardContent = () => (
         <>
             <h3>{name}</h3>
-            <h5> ID: {id}</h5>
             <p>Gender: {gender}</p>
             <p>Appearing in: {game}.</p>
             <p><i>"{description}"</i></p>
