@@ -12,12 +12,12 @@
 }
 
 #layout {
-  width: "60%";
-  padding: "50px";
-  borderradius: "10px";
+  width: 60%;
+  padding: 50px;
+  borderradius: 10px;
   background-color: #161c1c;
   color: white;
-  position: "relative";
+  position: relative;
 }
 
 #modal-close-btn {
