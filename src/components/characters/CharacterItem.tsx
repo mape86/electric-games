@@ -9,7 +9,6 @@ import ICharacterContext from "../../interfaces/ICharacterContext";
 import ElectricGamesService from "../../services/ElectricGamesService";
 
 const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, image}) => {
-    /*TODO: Add images and fix image URL (<img />)*/ 
     const [shouldEdit, setShouldEdit] = useState(false)
     const [nameInput, setNameInput] = useState(name)
     const [genderInput, setGenderInput] = useState(gender)
