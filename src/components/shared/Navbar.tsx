@@ -4,17 +4,21 @@ import './Navbar.css'
 
 const Navbar = () => {
   const [hasColor, setHasColor] = useState(false);
+  const [headerShouldChange, setHeaderShouldChange] = useState(false)
   const location = useLocation();
 
 
-  const handleScroll = useCallback( () => { 
+  const handleScroll = useCallback( () => {
     setHasColor(window.scrollY > 630)
   }, [])
-  
+
+    useEffect(() => {
+        const shouldChange = location.pathname !== "/"
+        setHeaderShouldChange(shouldChange)
+    }, [location.pathname])
   
   useEffect(() => {
-    const headerShouldChange = location.pathname === "/CharacterPage" || location.pathname === "/AllGames" || location.pathname === "/ConsolePage"
-    
+
     if(window && !headerShouldChange) window.removeEventListener("scroll", handleScroll)
   
     if(window && headerShouldChange) window.addEventListener("scroll", handleScroll)
@@ -22,7 +26,7 @@ const Navbar = () => {
   },[location.pathname]);
 
     return (
-        <nav  className={`d-flex justify-content-around navbar ${hasColor ? "navbar-custom-solid" : "navbar-custom"}`}>
+        <nav  className={`d-flex justify-content-around navbar ${hasColor && headerShouldChange ? "navbar-custom-solid" : "navbar-custom"}`}>
           <Link className='active text-light fs-5 fw-bold text-decoration-none' to='/'> Home </Link>
           <Link className='active text-light fs-5 fw-bold text-decoration-none' to='ConsolePage'> Consoles </Link>
           <Link className='active text-light fs-5 fw-bold text-decoration-none' to='AllGames'> All Games </Link>
@@ -31,4 +35,4 @@ const Navbar = () => {
       )
 } 
 
-export default Navbar; 
+export default Navbar;
