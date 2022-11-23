@@ -20,7 +20,6 @@ const CharacterProvider = ({children} : Props) => {
 
     const getCharacters = async () => {
         const charactersFromDb = await ElectricGamesService.getAllCharacters()
-
         setCharacters(charactersFromDb)
     }
 
