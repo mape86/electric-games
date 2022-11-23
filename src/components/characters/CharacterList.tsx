@@ -23,7 +23,7 @@ const CharacterList = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false)
     
     const getCharacterItem = () => {
-        //Filtering character array to only return characters matching filter coming from State, then map out the list. If no filter is active, the whole list will be returned.
+        //Mapping all characters and filter them by name and gender if filters are active
         return characters.filter((character) => character.game.includes(gameFilter) && character.gender.includes(genderFilter)).map((character, i) => (
             <CharacterItem 
                 key={`character-${i}`}
@@ -42,7 +42,7 @@ const CharacterList = () => {
         setModalIsOpen(false)
     }
 
-    //Using the Select component to set the filter values, and the list of filtered characters will be returned. If original state is used all characters will be returnes, and if no match is found a message will appear, The value "All" set in Select component isFiltered is the default value and will return all characters. 
+    //Using selects to choose filters, if no character matches filters, a message will be returned
     return(
         <>
         <section className="row pb-5">

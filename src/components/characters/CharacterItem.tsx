@@ -18,7 +18,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
     const {games} = useContext(GameContext) as IGameContext
     const {updateCharacter, deleteCharacter} = useContext(CharacterContext) as ICharacterContext
 
-    const cardContent = () => (
+    const CardContent = () => (
         <>
             <h3>{name}</h3>
             <p>Gender: {gender}</p>
@@ -27,7 +27,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
         </>
     )
 
-    const cardEditContent = () => (
+    const CardEditContent = () => (
         //Function using a Select component retrieve original values in input fields, and enables editing with useState. Using gameContext to map the games the characters are in.
         <>
         <div className="mb-3">
@@ -83,7 +83,7 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
             <Card>
                 <img className="card-img-top character-img" src={`https://localhost:7003/images/characters/${image}`} alt="" />
                 <div style={{flex: 1}} className="p-3 d-flex flex-column">
-                {shouldEdit ? cardEditContent() : cardContent()}
+                {shouldEdit ? <CardEditContent/> : <CardContent/>}
             
                 <div style={{flex: 1}} className="d-flex justify-content-end align-items-end w-100">
                 {shouldEdit ?

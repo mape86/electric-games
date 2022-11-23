@@ -18,12 +18,9 @@ const Navbar = () => {
     }, [location.pathname])
   
   useEffect(() => {
-
     if(window && !headerShouldChange) window.removeEventListener("scroll", handleScroll)
-  
     if(window && headerShouldChange) window.addEventListener("scroll", handleScroll)
-      
-  },[location.pathname]);
+  },[headerShouldChange]);
 
     return (
         <nav  className={`d-flex justify-content-around navbar ${hasColor && headerShouldChange ? "navbar-custom-solid" : "navbar-custom"}`}>
