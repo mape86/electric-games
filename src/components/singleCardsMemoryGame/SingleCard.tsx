@@ -1,6 +1,5 @@
 import "./SingleCard.css";
-import cover4 from "./cover4.jpg";
-
+import cover4 from "../../pages/homePage/electricMemoryGame/MemoryGameImages/cover4.jpg";
 function SingleCard({ gameCard, handleChoice, flippedCard }) {
   const handleClick = () => {
     handleChoice(gameCard);
