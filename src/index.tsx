@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import CharacterProvider from './contexts/CharacterContext';
 import GameProvider from './contexts/GameContext';
 import GameConsoleProvider from './contexts/GameConsoleContext';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,7 +16,9 @@ root.render(
     <GameConsoleProvider>
       <GameProvider>
         <CharacterProvider>
-          <App />
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
         </CharacterProvider>
       </GameProvider>
     </GameConsoleProvider>

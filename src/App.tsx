@@ -9,13 +9,13 @@ import GameInfo from "./pages/gameInfoPages/GameInfo";
 function App() {
   return (
     <>
-      <BrowserRouter>
         <div>
           <Navbar />
         </div>
 
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="GameInfo/:id" element={<GameInfo/>}/>
           <Route path="AllGames" element={<AllGames />} />
           <Route path="CharacterPage" element={<CharacterPage />} />
           <Route path="ConsolePage" element={<ConsolePage />} />
@@ -23,7 +23,6 @@ function App() {
         </Routes>
 
         <Footer />
-      </BrowserRouter>
     </>
   );
 }
