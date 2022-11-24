@@ -4,8 +4,9 @@ import "./HomePage.css";
 import "../shared/Pages.css";
 import HomepageGameSection from "../../components/homePage/HomepageGameSection";
 import { homePageData } from "./data";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import ElectricMemoryGame from "./electricMemoryGame/ElectricMemoryGame";
 
 const HomePage = () => {
   return (
@@ -25,6 +26,10 @@ const HomePage = () => {
         {homePageData.map((entry) => (
           <HomepageGameSection key={entry.className} {...entry} />
         ))}
+
+        <section className="electric-memory-game-section">
+          <ElectricMemoryGame />
+        </section>
 
         <section className="character-home-page home-page-sections">
           <h1>Characters</h1>

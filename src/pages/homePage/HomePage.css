@@ -49,6 +49,11 @@
   background-size: cover;
 }
 
+.electric-memory-game-section {
+  background-color: #131322;
+  height: 100vh;
+}
+
 .character-home-page {
   background-color: #112319;
 }
