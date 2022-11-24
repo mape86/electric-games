@@ -7,6 +7,17 @@
   scroll-snap-type: y mandatory;
 }
 
+.header-font-face-ofe {
+  font-family: "OurFriendElectric";
+  font-size: 64px;
+}
+
+@font-face {
+  font-family: "OurFriendElectric";
+  src: local("OurFriendElectric")
+    url("../shared/fonts/our-friend-electric-font/OurFriendElectric-BWr8d.ttf");
+}
+
 .header-home-page {
   background-image: url(/src/pages/assets/images/headerImages/thelastofus4.jpg);
 }

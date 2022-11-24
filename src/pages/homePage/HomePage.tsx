@@ -1,19 +1,17 @@
-import { Link } from "react-router-dom";
 import { FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 import "./HomePage.css";
 import "../shared/Pages.css";
 import HomepageGameSection from "../../components/homePage/HomepageGameSection";
 import { homePageData } from "./data";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 import ElectricMemoryGame from "./electricMemoryGame/ElectricMemoryGame";
+import "../shared/fonts/our-friend-electric-font/OurFriendElectric-BWr8d.ttf";
 
 const HomePage = () => {
   return (
     <>
       <div className="home-page">
         <div className="page-header header-home-page">
-          <h1>Electric Games</h1>
+          <h1 className="header-font-face-ofe">Electric Games</h1>
         </div>
 
         <section className="home-page-paragraph">

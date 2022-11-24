@@ -9,10 +9,7 @@ import tombRaiderCard from "./MemoryGameImages/tombraidercard.jpg";
 import unchartedCard from "./MemoryGameImages/unchartedcard.jpg";
 
 const gameCardImages: object[] = [
-  {
-    src: plagueTaleCard,
-    matched: false,
-  },
+  { src: plagueTaleCard, matched: false },
   { src: redDeadCard, matched: false },
   { src: skyrimCard, matched: false },
   { src: theWitcherCard, matched: false },
