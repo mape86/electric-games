@@ -44,8 +44,12 @@ const CharacterProvider = ({children} : Props) => {
         await getCharacters()
     }
 
+    const getCharacterById = async (id: number) => {
+        const result = await ElectricGamesService.getCharacterById(id)
+    }
+
     return (
-        <CharacterContext.Provider value={{characters, updateCharacter, addCharacter, deleteCharacter}}>
+        <CharacterContext.Provider value={{characters, updateCharacter, addCharacter, deleteCharacter, getCharacterById}}>
             {children}
         </CharacterContext.Provider>
     )

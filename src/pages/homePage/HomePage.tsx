@@ -26,7 +26,7 @@ const HomePage = () => {
           <HomepageGameSection key={entry.className} {...entry} />
         ))}
 
-        <div>
+        <div className="d-flex align-items-center pt-4">
           <button className="home-page-btn" onClick={AllGames}>
             Show All Games
           </button>
