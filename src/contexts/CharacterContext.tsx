@@ -3,6 +3,7 @@ import ICharacterContext from '../interfaces/ICharacterContext';
 import ICharacter from '../interfaces/ICharacter';
 import ElectricGamesService from '../services/ElectricGamesService';
 import axios from 'axios';
+import CharacterItem from '../components/characters/CharacterItem';
 
 export const CharacterContext = createContext<ICharacterContext | null>(null);
 
@@ -13,6 +14,7 @@ type Props = {
 const CharacterProvider = ({children} : Props) => {
 
     const [characters, setCharacters] = useState<ICharacter[]>([]);
+    const [singleCharacter, setSingleCharacter] = useState<ICharacter[]>([])
 
     useEffect (() =>{
         getCharacters()
@@ -46,10 +48,11 @@ const CharacterProvider = ({children} : Props) => {
 
     const getCharacterById = async (id: number) => {
         const result = await ElectricGamesService.getCharacterById(id)
+        setSingleCharacter(result)
     }
 
     return (
-        <CharacterContext.Provider value={{characters, updateCharacter, addCharacter, deleteCharacter, getCharacterById}}>
+        <CharacterContext.Provider value={{characters, updateCharacter, addCharacter, deleteCharacter}}>
             {children}
         </CharacterContext.Provider>
     )

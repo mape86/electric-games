@@ -1,4 +1,4 @@
-import {useContext, useState } from "react";
+import {ChangeEvent, useContext, useState } from "react";
 import CharacterItem from "./CharacterItem";
 import { CharacterContext } from "../../contexts/CharacterContext";
 import ICharacterContext from "../../interfaces/ICharacterContext";
@@ -9,6 +9,8 @@ import GameList from "../games/GameList";
 import AddCharacterModal from "./AddCharacterModal";
 import { GameContext } from "../../contexts/GameContext";
 import IGameContext from "../../interfaces/IGameContext";
+import ElectricGamesService from "../../services/ElectricGamesService";
+import Card from "../shared/Card";
  
  
 // game: ICharacter, gender: ICharacter
@@ -18,6 +20,7 @@ const CharacterList = () => {
     const {characters, addCharacter} = useContext(CharacterContext) as ICharacterContext
     const {games} = useContext(GameContext) as IGameContext
 
+    const [id, setId] = useState<string>('0')
     const [gameFilter, setGameFilter] = useState("");
     const [genderFilter, setGenderFilter] = useState("");
     const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -42,6 +45,24 @@ const CharacterList = () => {
         setModalIsOpen(false)
     }
 
+    const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        const {name, value} = e.currentTarget;
+
+        switch(name){
+            case "id":
+                setId(value);
+            break;
+        }
+    }
+
+    const getCharacterById = async () => {
+        const result = await ElectricGamesService.getCharacterById(Number(id))
+        console.log("inside")
+        console.log(id)
+        console.log(result)
+        return result.data
+    }
+
     //Using selects to choose filters, if no character matches filters, a message will be returned
     return(
         <>
@@ -49,6 +70,8 @@ const CharacterList = () => {
             <>
             <div className="d-flex align-items-center flex-column">
                 <button className="btn btn-outline-success mb-4" onClick={() => setModalIsOpen(true)}><PlusIcon/></button>
+                <input className="form-control-sm bg-dark text-white input-field" name="id" type="text" value={id} onChange={changeHandler} />
+                <button className="btn btn-outline-light mt-2" onClick={getCharacterById}>Character by ID</button>
                 <div className="d-flex w-100 align-items-center justify-content-center">
                     <Select
                     isFilter

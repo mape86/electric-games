@@ -11,7 +11,7 @@ const  HomepageGameSection = ({className, title, href}:SectionProps) => {
   return (
     <section className={className}>
     <h1>{title}</h1>
-    <Link to={href}>Read more</Link>
+    <Link className='btn btn-outline-light' to={href}>Read more</Link>
   </section>
   )
 }
