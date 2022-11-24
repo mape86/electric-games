@@ -5,6 +5,7 @@ import HomepageGameSection from "../../components/homePage/HomepageGameSection";
 import { homePageData } from "./data";
 import ElectricMemoryGame from "./electricMemoryGame/ElectricMemoryGame";
 import "../shared/fonts/our-friend-electric-font/OurFriendElectric-BWr8d.ttf";
+import AllGames from "../allGames/AllGames";
 
 const HomePage = () => {
   return (
@@ -24,6 +25,12 @@ const HomePage = () => {
         {homePageData.map((entry) => (
           <HomepageGameSection key={entry.className} {...entry} />
         ))}
+
+        <div>
+          <button className="home-page-btn" onClick={AllGames}>
+            Show All Games
+          </button>
+        </div>
 
         <section className="electric-memory-game-section">
           <ElectricMemoryGame />

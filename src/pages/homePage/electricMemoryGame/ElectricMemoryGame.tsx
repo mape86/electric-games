@@ -82,7 +82,7 @@ function ElectricMemoryGame() {
           />
         ))}
       </div>
-      <button className="memory-game-btn" onClick={shuffleCards}>
+      <button className="memory-game-btn " onClick={shuffleCards}>
         New Game
       </button>
     </div>
