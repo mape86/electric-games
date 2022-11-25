@@ -17,27 +17,22 @@ const classNameMap: Record<string, string> = {
   "The Elder Scrolls V: Skyrim": "skyrim",
 };
 
-const GameInfo = () => {
+const GameInfo = ({input}) => {
   const [game, setGame] = useState<IGame | null>(null);
   const [error, setError] = useState(false);
 
-  const { id } = useParams();
+  //const { id } = useParams();
 
-  const fetchGame = async () => {
-    try {
-      const { data } = await axios.get(`http://localhost:3000/${id}`); // Må passe på at dette er riktig port til db
-      setGame(data);
-    } catch (e) {
-      setError(true);
-    }
+  const getGame = () => {
+    setGame(input)
   };
 
   useEffect(() => {
-    fetchGame();
+    getGame()
   }, []);
 
   const gameTitleClassName = game ? classNameMap[game.title] : "";
-
+ 
   if (!game && !error) {
     return <div>Loading gameinfo</div>;
   }
@@ -46,8 +41,8 @@ const GameInfo = () => {
     return <div>Oops, something went wrong. Please try again!</div>;
   }
 
-  return (
-    <div className={`${gameTitleClassName} gameinfo-page-wrapper`}>
+  return (    
+    <div className={`${gameTitleClassName} game-info-wrapper`}>
       <div className="game-info-header ">
         <h1>{game?.title}</h1>
         <button>BUY NOW</button>
@@ -70,10 +65,10 @@ const GameInfo = () => {
         </ul>
       </section>
 
-      <div className="game-info-img-1"></div>
-      <div className="gameinfo-img-2"></div>
-      <div className="gameinfo-img-3"></div>
-      <div className="gameinfo-img-4"></div>
+      <div className={`${gameTitleClassName} game-info-img-1`}></div>
+      <div className={`${gameTitleClassName} game-info-img-2`}></div>
+      <div className={`${gameTitleClassName} game-info-img-3`}></div>
+      <div className={`${gameTitleClassName} game-info-img-4`}></div>
     </div>
   );
 };
