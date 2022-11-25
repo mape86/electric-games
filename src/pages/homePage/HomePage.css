@@ -26,7 +26,7 @@
   color: #dca307;
 }
 
-.header-font-face-ofe {
+.header-font-face-o {
   font-family: "OurFriendElectric";
   font-size: 64px;
 }
@@ -35,6 +35,17 @@
   font-family: "OurFriendElectric";
   src: local("OurFriendElectric")
     url("../shared/fonts/our-friend-electric-font/OurFriendElectric-BWr8d.ttf");
+}
+
+.header-font-face-ofe {
+  font-family: "Black Ops One", cursive;
+  font-size: 64px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+
+@font-face {
+  font-family: "Black Ops One", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 }
 
 .header-home-page {
