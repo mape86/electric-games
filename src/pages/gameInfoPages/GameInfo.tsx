@@ -1,10 +1,6 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import IGame from "../../interfaces/IGame";
 import "./GameInfo.css";
-import ElectricGamesService from "../../services/ElectricGamesService";
-import { GameContext } from "../../contexts/GameContext";
 
 const classNameMap: Record<string, string> = {
   "A Plague Tale: Requiem": "aplaguetale",
