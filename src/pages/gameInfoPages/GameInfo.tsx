@@ -17,8 +17,6 @@ const GameInfo = ({input}) => {
   const [game, setGame] = useState<IGame | null>(null);
   const [error, setError] = useState(false);
 
-  //const { id } = useParams();
-
   const getGame = () => {
     setGame(input)
   };
