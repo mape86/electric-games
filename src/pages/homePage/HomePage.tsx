@@ -29,7 +29,7 @@ const HomePage = () => {
           <HomepageGameSection key={entry.className} {...entry} />
         ))}
 
-        <div className="d-flex justify-conten-center pt-4">
+        <div className="d-flex justify-content-center pt-4">
           <Link to="/AllGames">
           <button className="home-page-btn btn btn-warning">
             Show All Games
