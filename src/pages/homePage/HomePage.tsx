@@ -4,6 +4,7 @@ import HomepageGameSection from "../../components/homePage/HomepageGameSection";
 import { homePageData } from "./data";
 import ElectricMemoryGame from "./electricMemoryGame/ElectricMemoryGame";
 import AllGames from "../allGames/AllGames";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -28,10 +29,12 @@ const HomePage = () => {
           <HomepageGameSection key={entry.className} {...entry} />
         ))}
 
-        <div className="d-flex align-items-center pt-4">
-          <button className="home-page-btn btn btn-warning" onClick={AllGames}>
+        <div className="d-flex justify-conten-center pt-4">
+          <Link to="/AllGames">
+          <button className="home-page-btn btn btn-warning">
             Show All Games
           </button>
+          </Link>
         </div>
 
         <section className="electric-memory-game-section">
