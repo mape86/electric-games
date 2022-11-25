@@ -1,13 +1,15 @@
 .footer {
   background-color: #181d21;
   color: white;
-  height: 65vh;
+  height: 40vh;
   padding: 2rem;
 }
 
 .footer-logo {
-  font-family: "OurFriendElectric";
+  font-family: "Our Friend Electric", sans-serif;
 }
+
+@import url("https://fonts.cdnfonts.com/css/our-friend-electric");
 
 .language-section {
   display: grid;

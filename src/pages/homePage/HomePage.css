@@ -1,12 +1,13 @@
 .home-page {
-  background-color: #161c1c;
+  background-color: #141313;
   box-sizing: border-box;
   color: white;
   padding: 0;
   margin: 0;
   scroll-snap-type: y mandatory;
 }
-.home-page-btn {
+.home-page-btn,
+.memory-game-btn {
   text-align: center;
   background-color: #dca307;
   color: #161c1c;
@@ -14,7 +15,6 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 1em;
-  font-weight: bold;
   border: none;
   margin: 0 auto;
   padding: 10px 25px;
@@ -38,7 +38,6 @@
 }
 .home-page-paragraph {
   height: 15vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,12 +58,9 @@
 .uncharted {
   background-image: url(/src/pages/assets/images/uncharted/unchartedhero.jpg);
 }
-.plagues-tale,
-.tomb-raider,
-.the-last-of-us,
-.uncharted,
+.game-info,
 .home-page-sections {
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,17 +71,21 @@
   background-size: cover;
 }
 
+.game-info {
+  margin: 15px;
+  border-radius: 15px;
+}
+
 .electric-memory-game-section {
-  background-color: #131322;
   height: 100vh;
 }
 
 .character-home-page {
-  background-color: #112319;
+  background-color: #10101b;
 }
 
 .consoles-home-page {
-  background-color: #0f0e10;
+  background-image: url(/src/pages/assets/images/consoleImage/Vh6eSp4siwggK7RUys72nP-1920-80.jpg.webp);
 }
 
 .socials-section {
