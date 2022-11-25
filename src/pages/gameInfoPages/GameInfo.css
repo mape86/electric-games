@@ -43,6 +43,9 @@
   background-image: url(/src/pages/assets/images/aplaguetale/aplaguetale4.jpg);
 }
 
-.game-info-img-1 {
+.game-info-img-1,
+.game-info-img-2,
+.game-info-img-3,
+.game-info-img-4 {
   height: 100vh;
 }
