@@ -5,12 +5,11 @@ import ICharacterContext from "../../interfaces/ICharacterContext";
 import PlusIcon from "../icons/Plus";
 import ICharacter from "../../interfaces/ICharacter";
 import Select from "../shared/Select";
-import GameList from "../games/GameList";
 import AddCharacterModal from "./AddCharacterModal";
 import { GameContext } from "../../contexts/GameContext";
 import IGameContext from "../../interfaces/IGameContext";
 import ElectricGamesService from "../../services/ElectricGamesService";
-import Card from "../shared/Card";
+import SingleCharacterModal from "./SingleCharacterModal";
  
  
 // game: ICharacter, gender: ICharacter
@@ -24,6 +23,7 @@ const CharacterList = () => {
     const [gameFilter, setGameFilter] = useState("");
     const [genderFilter, setGenderFilter] = useState("");
     const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [characterModalIsOpen, setCharacterModalIsOpen] = useState(false)
     
     const getCharacterItem = () => {
         //Mapping all characters and filter them by name and gender if filters are active
@@ -55,11 +55,12 @@ const CharacterList = () => {
         }
     }
 
+    const handleSingleCharacter = () => {
+        getCharacterById()
+    }
+
     const getCharacterById = async () => {
         const result = await ElectricGamesService.getCharacterById(Number(id))
-        console.log("inside")
-        console.log(id)
-        console.log(result)
         return result.data
     }
 
@@ -69,9 +70,9 @@ const CharacterList = () => {
         <section className="row pb-5">
             <>
             <div className="d-flex align-items-center flex-column">
-                <button className="btn btn-outline-success mb-4" onClick={() => setModalIsOpen(true)}><PlusIcon/></button>
-                <input className="form-control-sm bg-dark text-white input-field" name="id" type="text" value={id} onChange={changeHandler} />
-                <button className="btn btn-outline-light mt-2" onClick={getCharacterById}>Character by ID</button>
+                <button className="btn btn-outline-warning m-4" onClick={() => setModalIsOpen(true)}><PlusIcon/></button>
+                {/* <input className="form-control-sm bg-dark text-white input-field" name="id" type="text" value={id} onChange={changeHandler} /> */}
+                <button className="btn btn-outline-light mt-2" onClick={() => setCharacterModalIsOpen(true)}>Character by ID</button>
                 <div className="d-flex w-100 align-items-center justify-content-center">
                     <Select
                     isFilter
@@ -94,6 +95,7 @@ const CharacterList = () => {
             </>
         </section>
         {modalIsOpen && <AddCharacterModal handleAdd={handleAdd} onClose={() => setModalIsOpen(false)}/>}
+        {characterModalIsOpen && <SingleCharacterModal handleSingleCharacter={handleSingleCharacter} onClose={() => setCharacterModalIsOpen(false)}/>}
         </>
     )
 }

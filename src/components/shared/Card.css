@@ -1,5 +1,5 @@
 .card {
-  background-color: #161c1c90;
+  background-color: #45454550;
   color: #fff;
   border-radius: 15px;
 }
@@ -10,20 +10,21 @@
   object-fit: fill;
 }
 
-.character-img {
-  width: 80%;
-  margin: 0 auto;
-}
-
 .card-body {
   height: fit-conent;
 }
 
 .card h3 {
+  color: #ffba00;
   font-size: 2.4rem;
   font-weight: 600;
+  padding: 0.2rem;
 }
 
-.card h3 {
-  color: #ffba00;
+.card h5 {
+  paddin: 0.2rem;
+}
+
+.card p {
+  padding: 0.2rem;
 }
