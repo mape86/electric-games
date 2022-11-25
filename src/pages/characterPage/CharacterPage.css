@@ -1,3 +1,7 @@
 .character-header-img {
   background-image: url(/src/pages/assets/images/thewitcher/thewitcher3.jpg);
 }
+
+.background-clr {
+  background-color: #161c1c;
+}

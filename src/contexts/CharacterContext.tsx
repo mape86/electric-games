@@ -14,7 +14,6 @@ type Props = {
 const CharacterProvider = ({children} : Props) => {
 
     const [characters, setCharacters] = useState<ICharacter[]>([]);
-    const [singleCharacter, setSingleCharacter] = useState<ICharacter[]>([])
 
     useEffect (() =>{
         getCharacters()
@@ -44,11 +43,6 @@ const CharacterProvider = ({children} : Props) => {
         setCharacters(newCharacterList)
 
         await getCharacters()
-    }
-
-    const getCharacterById = async (id: number) => {
-        const result = await ElectricGamesService.getCharacterById(id)
-        setSingleCharacter(result)
     }
 
     return (
