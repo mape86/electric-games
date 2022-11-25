@@ -10,7 +10,7 @@ type Props = {
 }
 
 const GameConsoleProvider = ({children} : Props) => {
-    const [consoles, setConsoles] = useState<IGameConsole[]>([]);
+    const [consoles, setConsoles] = useState<IGameConsole[]>([]); 
 
     useEffect(()=>{
         getGameConsoles();
@@ -20,6 +20,7 @@ const GameConsoleProvider = ({children} : Props) => {
         const consolesFromDb = await ElectricGamesService.getAllConsoles();
         setConsoles(consolesFromDb);
     }
+
 
     return(
         <GameConsoleContext.Provider value={{consoles}}>

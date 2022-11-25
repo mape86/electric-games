@@ -1,7 +1,5 @@
 import axios from "axios";
 import ICharacter from "../interfaces/ICharacter";
-import IGame from "../interfaces/IGame";
-import IGameConsole from "../interfaces/IGameConsole";
 
 const ElectricGamesService = (
     () => {
@@ -46,6 +44,11 @@ const ElectricGamesService = (
         const getAllConsoles = async () =>{
             const result = await axios.get(ElectriGamesEndpoint.gameConsole); 
             return result.data; 
+        } 
+        
+        const getConsoleByBrand = async (brand: string) =>{
+            const result = await axios.get(`${ElectriGamesEndpoint.gameConsole}/getConsoleByBrand/${brand}`)
+            return result.data; 
         }
 
         const uploadImage = async (img: File) => {
@@ -70,6 +73,7 @@ const ElectricGamesService = (
             postCharacter,
             getAllGames,
             getAllConsoles,
+            getConsoleByBrand,
             uploadImage
         }
 
