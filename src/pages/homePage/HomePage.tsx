@@ -3,7 +3,6 @@ import "../shared/Pages.css";
 import HomepageGameSection from "../../components/homePage/HomepageGameSection";
 import { homePageData } from "./data";
 import ElectricMemoryGame from "./electricMemoryGame/ElectricMemoryGame";
-import AllGames from "../allGames/AllGames";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {

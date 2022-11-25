@@ -11,10 +11,11 @@ const HomepageGameSection = ({ className, title, href }: SectionProps) => {
   return (
     <section className={className}>
       <h1>{title}</h1>
-      <br></br>
-      <Link className="btn btn-outline-warning w-20" to={href}>
-        Read more
-      </Link>
+      <div className="d-flex justify-content-center">
+        <Link to={href}>
+          <button className="btn btn-outline-warning w-20">Read more</button>
+        </Link>
+      </div>
     </section>
   );
 };
