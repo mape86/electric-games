@@ -1,4 +1,3 @@
-import { FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 import "./HomePage.css";
 import "../shared/Pages.css";
 import HomepageGameSection from "../../components/homePage/HomepageGameSection";
