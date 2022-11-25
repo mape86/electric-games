@@ -30,6 +30,13 @@
   background-image: url(/src/pages/assets/images/skyrim/skyrimhero.jpg);
 }
 
+.game-info-images {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .aplaguetale.game-info-img-1 {
   background-image: url(/src/pages/assets/images/aplaguetale/aplaguetale1.jpg);
 }
@@ -43,9 +50,99 @@
   background-image: url(/src/pages/assets/images/aplaguetale/aplaguetale4.jpg);
 }
 
-.game-info-img-1,
-.game-info-img-2,
-.game-info-img-3,
-.game-info-img-4 {
-  height: 100vh;
+.lastofus.game-info-img-1 {
+  background-image: url(/src/pages/assets/images/thelastofus/thelastofus1.jpg);
+}
+
+.lastofus.game-info-img-2 {
+  background-image: url(/src/pages/assets/images/thelastofus/thelastofus2.jpg);
+}
+
+.lastofus.game-info-img-3 {
+  background-image: url(/src/pages/assets/images/thelastofus/thelastofus3.jpg);
+}
+
+.lastofus.game-info-img-4 {
+  background-image: url(/src/pages/assets/images/thelastofus/thelastofus4.jpg);
+}
+
+.tombraider.game-info-img-1 {
+  background-image: url(/src/pages/assets/images/tombraider/tombraider1.jpg);
+}
+
+.tombraider.game-info-img-2 {
+  background-image: url(/src/pages/assets/images/tombraider/tombraider2.jpg);
+}
+
+.tombraider.game-info-img-3 {
+  background-image: url(/src/pages/assets/images/tombraider/tombraider3.jpg);
+}
+
+.tombraider.game-info-img-4 {
+  background-image: url(/src/pages/assets/images/tombraider/tombraider4.jpg);
+}
+
+.uncharted.game-info-img-1 {
+  background-image: url(/src/pages/assets/images/uncharted/uncharted1.jpg);
+}
+.uncharted.game-info-img-2 {
+  background-image: url(/src/pages/assets/images/uncharted/uncharted2.jpg);
+}
+.uncharted.game-info-img-3 {
+  background-image: url(/src/pages/assets/images/uncharted/uncharted3.jpg);
+}
+.uncharted.game-info-img-4 {
+  background-image: url(/src/pages/assets/images/uncharted/uncharted4.jpg);
+}
+
+.thewitcher.game-info-img-1 {
+  background-image: url(/src/pages/assets/images/thewitcher/thewitcher1.jpg);
+}
+.thewitcher.game-info-img-2 {
+  background-image: url(/src/pages/assets/images/thewitcher/thewitcher2.jpg);
+}
+.thewitcher.game-info-img-3 {
+  background-image: url(/src/pages/assets/images/thewitcher/thewitcher3.jpg);
+}
+.thewitcher.game-info-img-4 {
+  background-image: url(/src/pages/assets/images/thewitcher/thewitcher4.jpg);
+}
+
+.reddead.game-info-img-1 {
+  background-image: url(/src/pages/assets/images/reddeadredemption/reddead1.jpg);
+}
+.reddead.game-info-img-2 {
+  background-image: url(/src/pages/assets/images/reddeadredemption/reddead2.jpg);
+}
+.reddead.game-info-img-3 {
+  background-image: url(/src/pages/assets/images/reddeadredemption/reddead3.jpg);
+}
+.reddead.game-info-img-4 {
+  background-image: url(/src/pages/assets/images/reddeadredemption/reddead4.jpg);
+}
+
+.skyrim.game-info-img-1 {
+  background-image: url(/src/pages/assets/images/skyrim/skyrim1.jpg);
+}
+.skyrim.game-info-img-2 {
+  background-image: url(/src/pages/assets/images/skyrim/skyrim2.jpg);
+}
+.skyrim.game-info-img-3 {
+  background-image: url(/src/pages/assets/images/skyrim/skyrim3.jpg);
+}
+.skyrim.game-info-img-4 {
+  background-image: url(/src/pages/assets/images/skyrim/skyrim4.jpg);
+}
+
+.assassins.game-info-img-1 {
+  background-image: url(/src/pages/assets/images/assassins/assassin1.jpg);
+}
+.assassins.game-info-img-2 {
+  background-image: url(/src/pages/assets/images/assassins/assassin2.jpg);
+}
+.assassins.game-info-img-3 {
+  background-image: url(/src/pages/assets/images/assassins/assassin3.jpg);
+}
+.assassins.game-info-img-4 {
+  background-image: url(/src/pages/assets/images/assassins/assassin4.jpg);
 }

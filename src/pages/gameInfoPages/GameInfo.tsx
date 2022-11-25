@@ -13,20 +13,20 @@ const classNameMap: Record<string, string> = {
   "The Elder Scrolls V: Skyrim": "skyrim",
 };
 
-const GameInfo = ({input}) => {
+const GameInfo = ({ input }) => {
   const [game, setGame] = useState<IGame | null>(null);
   const [error, setError] = useState(false);
 
   const getGame = () => {
-    setGame(input)
+    setGame(input);
   };
 
   useEffect(() => {
-    getGame()
+    getGame();
   }, []);
 
   const gameTitleClassName = game ? classNameMap[game.title] : "";
- 
+
   if (!game && !error) {
     return <div>Loading gameinfo</div>;
   }
@@ -35,7 +35,7 @@ const GameInfo = ({input}) => {
     return <div>Oops, something went wrong. Please try again!</div>;
   }
 
-  return (    
+  return (
     <div className={`${gameTitleClassName} game-info-wrapper`}>
       <div className="game-info-header ">
         <h1>{game?.title}</h1>
@@ -59,10 +59,18 @@ const GameInfo = ({input}) => {
         </ul>
       </section>
 
-      <div className={`${gameTitleClassName} game-info-img-1`}></div>
-      <div className={`${gameTitleClassName} game-info-img-2`}></div>
-      <div className={`${gameTitleClassName} game-info-img-3`}></div>
-      <div className={`${gameTitleClassName} game-info-img-4`}></div>
+      <div
+        className={`${gameTitleClassName} game-info-img-1 game-info-images`}
+      ></div>
+      <div
+        className={`${gameTitleClassName} game-info-img-2 game-info-images`}
+      ></div>
+      <div
+        className={`${gameTitleClassName} game-info-img-3 game-info-images`}
+      ></div>
+      <div
+        className={`${gameTitleClassName} game-info-img-4 game-info-images`}
+      ></div>
     </div>
   );
 };
