@@ -5,6 +5,10 @@
   padding: 2rem;
 }
 
+.footer-logo {
+  font-family: "OurFriendElectric";
+}
+
 .language-section {
   display: grid;
   justify-content: center;
@@ -33,7 +37,7 @@
 
 .link-styling {
   text-decoration: none;
-  color: white;
+  color: rgb(236, 236, 236);
   padding: 1rem;
 }
 
