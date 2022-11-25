@@ -16,10 +16,12 @@ const gameCardImages: object[] = [
   { src: tombRaiderCard, matched: false },
   { src: unchartedCard, matched: false },
 ];
+const shuffled: any = [...gameCardImages, ...gameCardImages]
+  .sort(() => Math.random() - 0.5)
+  .map((gameCard) => ({ ...gameCard, id: Math.random() }));
 
 function ElectricMemoryGame() {
-  const [gameCards, setGameCards] = useState([]);
-  const [turns, setGame] = useState(0);
+  const [gameCards, setGameCards] = useState(shuffled);
   const [cardOne, setCardOne] = useState(null);
   const [cardTwo, setCardTwo] = useState(null);
 
@@ -27,9 +29,7 @@ function ElectricMemoryGame() {
     const shuffled: any = [...gameCardImages, ...gameCardImages]
       .sort(() => Math.random() - 0.5)
       .map((gameCard) => ({ ...gameCard, id: Math.random() }));
-
     setGameCards(shuffled);
-    setGame(0);
   };
 
   // handles the chosen cards
@@ -57,11 +57,9 @@ function ElectricMemoryGame() {
     }
   }, [cardOne, cardTwo]);
 
-  // reset and increase turn
   const resetGame = () => {
     setCardOne(null);
     setCardTwo(null);
-    setGame((prevTurns) => prevTurns + 1);
   };
 
   return (
@@ -82,7 +80,7 @@ function ElectricMemoryGame() {
           />
         ))}
       </div>
-      <button className="home-page-btn btn btn-warning" onClick={shuffleCards}>
+      <button className=" btn btn-outline-warning w-50" onClick={shuffleCards}>
         New Game
       </button>
     </div>
