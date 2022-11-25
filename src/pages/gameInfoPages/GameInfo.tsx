@@ -36,8 +36,8 @@ const GameInfo = ({ input }) => {
   }
 
   return (
-    <div className={`${gameTitleClassName} game-info-wrapper`}>
-      <div className="game-info-header ">
+    <div className={`${gameTitleClassName} game-info-wrapper `}>
+      <div className="game-info-header game-info-images">
         <h1>{game?.title}</h1>
         <button>BUY NOW</button>
       </div>
