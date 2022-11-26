@@ -38,26 +38,30 @@ const GameInfo = ({ input }) => {
   return (
     <div className={`${gameTitleClassName} game-info-wrapper `}>
       <div className="game-info-header game-info-images">
-        <h1>{game?.title}</h1>
-        <button>BUY NOW</button>
+        <h1 className="game-info-h1">{game?.title}</h1>
+        <button className="btn btn-warning game-info-header-btn">Buy Now</button>
       </div>
 
-      <section className="game-info-about-section">
-        <h2>About</h2>
-        <p>{game?.description}</p>
-      </section>
+      <div className="about-section-container">
+        <section className="game-info-about-section">
+          <h2 className="text-warning">About</h2>
+          <p>{game?.description}</p>
+        </section>
+      </div>
 
-      <section className="game-info-details-section">
-        <h2>Game Details</h2>
-        <ul>
-          <li>Title: {game?.title}</li>
-          <li>Platform: {game?.platform}</li>
-          <li>Release Year: {game?.releaseYear}</li>
-          <li>Publisher: {game?.publisher}</li>
-          <li>Genre: {game?.genre}</li>
-          <li>Price: {game?.price}</li>
-        </ul>
-      </section>
+      <div className="game-info-container">
+        <section className="game-info-details-section">
+          <h2 className="text-warning">Game Details</h2>
+          <ul className="list-group">
+            <li className="list-group-item list-group-item-dark">Title: {game?.title}</li>
+            <li className="list-group-item list-group-item-dark">Platform: {game?.platform}</li>
+            <li className="list-group-item list-group-item-dark">Release Year: {game?.releaseYear}</li>
+            <li className="list-group-item list-group-item-dark">Publisher: {game?.publisher} ©</li>
+            <li className="list-group-item list-group-item-dark">Genre: {game?.genre}</li>
+            <li className="list-group-item list-group-item-dark">Price: NOK {game?.price.toFixed(2)}</li>
+          </ul>
+        </section>
+      </div>
 
       <div
         className={`${gameTitleClassName} game-info-img-1 game-info-images`}

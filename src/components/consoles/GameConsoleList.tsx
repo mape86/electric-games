@@ -49,8 +49,8 @@ const GameConsoleList = () => {
         <>
         <section className="d-flex justify-content-center">
             <div className="flex-row">
-                <input className="form-control-sm input-field" name="brand" type="text" value={consoleBrand} onChange={handleChange} />
-                <button className="btn btn-outline-light m-2" onClick={getGameConsoleByBrand}>Get Consoles by Brand</button>
+                <input className="form-control-sm input-field" name="brand" placeholder="Brand (e.g Sony)" type="text" value={consoleBrand} onChange={handleChange} />
+                <button className="btn btn-outline-warning m-2" onClick={getGameConsoleByBrand}>Get Consoles by Brand</button>
                 <button className="btn btn-outline-light m-2" onClick={showAllConsoles}>Show All Consoles</button>
             </div>
         </section>

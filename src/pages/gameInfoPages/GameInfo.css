@@ -146,3 +146,40 @@
 .assassins.game-info-img-4 {
   background-image: url(/src/pages/assets/images/assassins/assassin4.jpg);
 }
+
+.game-info-h1{
+  position: relative;
+  top: 40vh; 
+  left: 10vw; 
+  color: #FFFF;
+  font-size: 3em;
+}
+
+.game-info-header-btn{
+  position:relative;
+  top: 40vh;
+  left: 10vw; 
+}
+
+.about-section-container{
+  display: flex;
+  justify-content: center;
+}
+
+.game-info-about-section{
+  padding: 1rem 0 0 1rem; 
+  color: #FFFF; 
+  width: 50vw;
+}
+.game-info-container{
+  display: flex;
+  justify-content: center;
+}
+
+.game-info-details-section{
+  padding-left: 1rem; 
+  padding-bottom: 1.5rem;
+  color: #FFFF;
+  width: 50vw;
+}
+
