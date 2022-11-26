@@ -62,25 +62,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  flex-direction: column;
 }
 
 .game-info {
   margin: 1rem;
   border-radius: 15px;
-}
-
-.character-home-page {
-  background-color: #10101b;
-}
-
-.consoles-home-page {
-  background-image: url(/src/pages/assets/images/consoleImage/Vh6eSp4siwggK7RUys72nP-1920-80.jpg.webp);
-}
-
-.socials-section {
-  background-color: #515354;
-  color: #dca307;
-  text-align: center;
-  height: 40vh;
-  scroll-snap-align: start;
 }

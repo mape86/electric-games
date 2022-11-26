@@ -42,12 +42,12 @@ const GameInfo = ({ input }) => {
         <button>BUY NOW</button>
       </div>
 
-      <section className="gameinfo-about-section">
+      <section className="game-info-about-section">
         <h2>About</h2>
         <p>{game?.description}</p>
       </section>
 
-      <section className="gameinfo-details-section">
+      <section className="game-info-details-section">
         <h2>Game Details</h2>
         <ul>
           <li>Title: {game?.title}</li>
