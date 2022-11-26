@@ -14,10 +14,12 @@
 #layout {
   width: 60%;
   padding: 50px;
+  max-height: 80vh;
   border-radius: 10px;
   background-color: #161c1c;
   color: white;
   position: relative;
+  overflow-y: scroll;
 }
 
 #modal-close-btn {

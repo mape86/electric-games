@@ -1,50 +1,34 @@
-import { ChangeEvent, useContext, useEffect, useState } from "react";
-import { CharacterContext } from "../../contexts/CharacterContext";
+import {useState } from "react";
 import ICharacter from "../../interfaces/ICharacter";
-import ICharacterContext from "../../interfaces/ICharacterContext";
 import ElectricGamesService from "../../services/ElectricGamesService";
+import "./Modal.css"
 import CharacterItem from "./CharacterItem";
-import "./AddCharacterModal.css"
 
 
 interface SingleCharacterModalProps {
-    handleSingleCharacter: (c: ICharacter) => void
     onClose: () => void
 }
 
-const SingleCharacterModal = ({handleSingleCharacter, onClose}: SingleCharacterModalProps) => {
-    console.log("inside")
+const SingleCharacterModal = ({ onClose}: SingleCharacterModalProps) => {
 
     const [id, setId] = useState<string>('0')
-    const [character, setCharacter] = useState()
-    const {characters} = useContext(CharacterContext) as ICharacterContext
-
-    const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        const {name, value} = e.currentTarget;
-
-        switch(name){
-            case "id":
-                setId(value);
-            break;
-        }
-    }
+    const [character, setCharacter] = useState<ICharacter | null>(null)
 
     const getCharacterById = async () => {
-        let result = await ElectricGamesService.getCharacterById(Number(id))
-        console.log(result)
-        result = characters.filter((character) => character.id == result.id)
-        setCharacter(result)
-        handleSingleCharacter(result)
-        console.log("inside getbyID")
-        
+        await ElectricGamesService.getCharacterById(Number(id)).then(result => setCharacter(result)) 
     }
 
     return(
         <div id="overlay">
         <div id="layout">
-            <input className="form-control-sm bg-dark text-white input-field" name="id" type="text" value={id} onChange={changeHandler} />
-            <button className="btn btn-outline-light mt-2" onClick={getCharacterById}>Get character</button>
-            <button onClick={onClose}>Close</button>
+        <button id="modal-close-btn" className="btn btn-outline-warning" onClick={onClose}>X</button>
+            <input className="form-control-sm bg-dark text-white input-field" name="id" type="text" value={id} onChange={(e) => setId(e.target.value)} />
+            <button className="btn btn-warning mt-2 m-2" onClick={getCharacterById}>Get character</button>
+            {character ?
+            <CharacterItem {...character} singleItem/>
+            : 
+            <p>No matching character</p>
+            }
             </div>
         </div>
     )

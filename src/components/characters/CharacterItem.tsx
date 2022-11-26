@@ -1,14 +1,17 @@
 import ICharacter from "../../interfaces/ICharacter"
-import {FC, useContext, useEffect, useState} from 'react';
+import {FC, useContext, useState} from 'react';
 import Card from "../shared/Card";
 import { GameContext } from "../../contexts/GameContext";
 import IGameContext from "../../interfaces/IGameContext";
 import Select from "../shared/Select";
 import { CharacterContext } from "../../contexts/CharacterContext";
 import ICharacterContext from "../../interfaces/ICharacterContext";
-import ElectricGamesService from "../../services/ElectricGamesService";
 
-const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, image}) => {
+interface ItemProps extends ICharacter {
+    singleItem?: boolean
+}
+
+const CharacterItem: FC<ItemProps> = ({id, name, gender, game, description, image, singleItem}) => {
     const [shouldEdit, setShouldEdit] = useState(false)
     const [nameInput, setNameInput] = useState(name)
     const [genderInput, setGenderInput] = useState(gender)
@@ -76,9 +79,11 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
         deleteCharacter(Number(id)) 
     }
 
+    const articleClassName = singleItem ? "w-100" : "d-flex col-lg-4 col-md-6 col-sm-12 g-4"
+
     //Using ternary operator to return edited content if edited, else return the full orginial list. 
     return (
-        <article className="d-flex col-lg-4 col-md-6 col-sm-12 g-4">
+        <article className={articleClassName}>
             <Card>
                 <img className="card-img-top character-img" src={`https://localhost:7003/images/characters/${image}`} alt="" />
                 <div style={{flex: 1}} className="p-3 d-flex flex-column">
@@ -87,13 +92,13 @@ const CharacterItem: FC<ICharacter> = ({id, name, gender, game, description, ima
                 <div style={{flex: 1}} className="d-flex justify-content-end align-items-end w-100">
                 {shouldEdit ?
                 <>
-                <button className="btn btn-outline-success mx-2 " onClick={handleUpdate}>Save</button>
+                <button className="btn btn-outline-warning mx-2 " onClick={handleUpdate}>Save</button>
                 <button className="btn btn-outline-danger" onClick={() => setShouldEdit(false)}>Cancel</button> 
                 </> 
                 :
                 <>
-                <button className="btn btn-sm btn-outline-light mx-2" onClick={() => handleDelete(id)}>Delete</button>
-                <button className="btn btn-sm btn-outline-light" onClick={() => setShouldEdit(true)}>Edit</button>
+                <button className="btn btn-sm btn-danger mx-2" onClick={() => handleDelete(id)}>Delete</button>
+                <button className="btn btn-sm btn-outline-warning" onClick={() => setShouldEdit(true)}>Edit</button>
                 </>
                 }
                 </div>

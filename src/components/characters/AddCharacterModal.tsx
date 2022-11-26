@@ -1,6 +1,5 @@
-// import UploadImage from "../shared/UploadImage"
 import { ChangeEvent, useState } from "react"
-import "./AddCharacterModal.css"
+import "./Modal.css"
 import ICharacter from "../../interfaces/ICharacter"
 import ElectricGamesService from "../../services/ElectricGamesService"
 
@@ -73,7 +72,7 @@ const AddCharacterModal = ({handleAdd, onClose}:ModalProps) => {
     return (
         <div id="overlay">
         <div id="layout" >
-            <button id="modal-close-btn" onClick={onClose}>X</button>
+            <button id="modal-close-btn" className="btn btn-outline-warning" onClick={onClose}>X</button>
             <label>Name:</label>
             <input name="name" className="form-control bg-dark text-white" type="text" value={name} onChange={handleChange}/>
             <label>Gender:</label>
@@ -88,13 +87,12 @@ const AddCharacterModal = ({handleAdd, onClose}:ModalProps) => {
             <textarea name="description" className="form-control bg-dark text-white" rows={10} value={description} onChange={(e) => setDescription(e.target.value)}/>
             <input name="image" type="hidden"/>
             <label>Upload image:</label>
-            <input id="upload" onChange={setImageHandler} type="file"/>
+            <input id="upload"  onChange={setImageHandler} type="file"/>
             <div className="mb-2 mt-2">
-                <button className="btn btn-outline-light mx-2" onClick={imageUpload}>Upload image</button>
+                <button className="btn btn-outline-warning mx-2" onClick={imageUpload}>Upload image</button>
             </div>
             <div className="d-flex justify-content-between align-items-end">
-                <button className="btn btn-outline-success mx-2 mb-2" onClick={saveCharacter}>Save character</button>
-                <button className="btn btn-outline-danger mx-2 mb-2" onClick={onClose}>Cancel</button>
+                <button className="btn btn-success mx-2 mb-2" onClick={saveCharacter}>Save character</button>
             </div>
         </div>
         </div>
