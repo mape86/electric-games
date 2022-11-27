@@ -1,5 +1,4 @@
 import GameList from "../../components/games/GameList"
-import Select from "../../components/shared/Select"
 import "../shared/Pages.css"
 import "./AllGames.css"
 

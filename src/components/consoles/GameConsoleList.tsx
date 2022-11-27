@@ -1,4 +1,4 @@
-import { ChangeEvent, useContext, useEffect, useState } from "react";
+import { ChangeEvent, useContext, useState } from "react";
 import { GameConsoleContext } from "../../contexts/GameConsoleContext";
 import IGameConsole from "../../interfaces/IGameConsole";
 import IGameConsoleContext from "../../interfaces/IGameConsoleContex";

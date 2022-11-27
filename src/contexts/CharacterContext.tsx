@@ -2,8 +2,6 @@ import { useEffect, useState, createContext, ReactNode } from 'react';
 import ICharacterContext from '../interfaces/ICharacterContext';
 import ICharacter from '../interfaces/ICharacter';
 import ElectricGamesService from '../services/ElectricGamesService';
-import axios from 'axios';
-import CharacterItem from '../components/characters/CharacterItem';
 
 export const CharacterContext = createContext<ICharacterContext | null>(null);
 
