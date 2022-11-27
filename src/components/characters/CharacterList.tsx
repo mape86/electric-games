@@ -43,6 +43,7 @@ const CharacterList = () => {
 
 
     //Using selects to choose filters, if no character matches filters, a message will be returned
+    //Using modal for both adding and retrieving character by id
     return(
         <>
         <section className="row pb-5">
