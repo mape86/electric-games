@@ -8,7 +8,9 @@ import theWitcherCard from "./MemoryGameImages/thewitchercard.jpg";
 import tombRaiderCard from "./MemoryGameImages/tombraidercard.jpg";
 import unchartedCard from "./MemoryGameImages/unchartedcard.jpg";
 
-/* Memory Game was a part of our React-learning-process and we have followed Net Ninjas tutorial "Memory game with react" on YouTube. src: https://www.youtube.com/playlist?list=PL4cUxeGkcC9iQ7g2eoNXHCJBBBz40S_Lm
+/* Memory Game was a part of our React-learning-process 
+and we have followed Net Ninjas tutorial "Memory game with react" on YouTube. 
+src: https://www.youtube.com/playlist?list=PL4cUxeGkcC9iQ7g2eoNXHCJBBBz40S_Lm
  */
 
 const gameCardImages: object[] = [
