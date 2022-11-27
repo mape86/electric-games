@@ -55,7 +55,7 @@ const GameConsoleList = () => {
             </div>
         </section>
         <section className="row pb-4">
-            {getGameConsoleItems().length > 0 ? getGameConsoleItems() : <h2 className="text-white p-3">No Matching Brand Found...(Field is case sensitive)</h2>}
+            {getGameConsoleItems().length > 0 ? getGameConsoleItems() : <h2 className="text-white p-3">No Matching Brand Found</h2>}
         </section>
         </>
     )
