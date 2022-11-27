@@ -68,7 +68,7 @@ const CharacterList = () => {
                 </div>
             </div>
                 
-            {getCharacterItem().length > 0 ? getCharacterItem() : <h2>No matching character found</h2>}
+            {getCharacterItem().length > 0 ? getCharacterItem() : <h2 className="text-white">No matching character found</h2>}
             </>
         </section>
         {modalIsOpen && <AddCharacterModal handleAdd={handleAdd} onClose={() => setModalIsOpen(false)}/>}
